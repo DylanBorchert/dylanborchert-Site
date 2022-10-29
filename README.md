@@ -1,3 +1,4 @@
 # Dylan Borchert's Website
 
-[dylanborchert.ca](dylanborchert.ca)
+My Site: 
+http://dylanborchert.ca/ 
