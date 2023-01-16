@@ -4,7 +4,7 @@ import './GeometricGradient.css';
 const GeometricGradient = (props) => {
 
  return (
-       <div class={"GeometricGradient"}></div>
+       <div className="GeometricGradient -z-20"></div>
  );
 }
 

@@ -5,3 +5,7 @@
 .debug, .debug *{
     box-shadow: inset 0px 0px 0px 1px #f00;
 }
+
+html {
+    background: #000000;
+}

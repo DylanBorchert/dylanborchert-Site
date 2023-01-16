@@ -16,15 +16,17 @@
 	 height: 100vh;
 	 width: 100vmax;
 	 height: 100vmax;
-	 background: rgba(0, 0, 0, 0.05);
 	 animation: background 90s linear infinite;
 }
+
+
 .GeometricGradient:after {
 	left: 15vw;
-    
+    background: rgba(200, 200, 200, 0.05);
 }
 
  .GeometricGradient:before {
+	background: rgba(0,0,0, 0.5);
 	 right: 15vw;
 	 animation-delay: -30s;
 	 animation-direction: reverse;
@@ -32,25 +34,25 @@
 
  @keyframes theme {
 	 0% {
-		 background: #0f7ca7;
+		 background: #121212;
 	}
 	 16% {
-		 background: #015983;
+		 background: #0f0f0f;
 	}
 	 33% {
-		 background: #023756;
+		 background: #0a0a0a;
 	}
 	 50% {
-		 background: #023048;
+		 background: #000000;
 	}
 	 66% {
-		 background: #023756;
+		 background: #0a0a0a;
 	}
 	 83% {
-		 background: #015983;
+		 background: #0f0f0f;
 	}
 	 100% {
-		 background: #0f7ca7;
+		 background: #121212;
 	}
 }
  @keyframes background {
