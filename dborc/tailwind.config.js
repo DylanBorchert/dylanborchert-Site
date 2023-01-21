@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         /* CSS HEX */
-        'smoky-black': '#121212ff',
+        'smoky-black': '#121212',
         'primary-1': '#0292F2',
         'secondary-1': '#0261A1',
         'primary-2': '#FFBE0B',

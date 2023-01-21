@@ -29,11 +29,12 @@ function App() {
       {/* <canvas style="position: absolute;left:0;z-index: -1;" id="canvas" width="1078" height="1230"></canvas> */}
       <div className="flex flex-col justify-between min-h-full">
         <Navbar />
-        <div className=" mix-blend-difference">
-          <p className="text-8xl font-semibold text-white pb-4">Dylan Borchert</p>
-          <p className="text-4xl font-semibold text-white">The biggest nerd you'll ever meet </p>
+        <div className=" ">
+          <p className="text-8xl font-semibold pb-4 hover:font-outline-4 hover:text-transparent text-white">Dylan Borchert</p>
+          <p className="text-4xl font-semibold text-white">Something kinda cool </p>
 
         </div>
+
         {/* <LinkTree /> */}
         <div></div>
         <Footer />

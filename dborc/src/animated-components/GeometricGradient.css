@@ -22,7 +22,7 @@
 
 .GeometricGradient:after {
 	left: 15vw;
-    background: rgba(200, 200, 200, 0.05);
+    background: rgba(200, 200, 200, 0.1);
 }
 
  .GeometricGradient:before {

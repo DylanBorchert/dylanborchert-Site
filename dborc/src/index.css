@@ -8,4 +8,14 @@
 
 html {
     background: #000000;
+    font-family: "Open Sans", sans-serif;
 }
+
+@layer base {
+    .font-outline-2-primary-1 {
+      -webkit-text-stroke: 2px #0292F2;
+    }
+    .font-outline-4 {
+      -webkit-text-stroke: 2px white;
+    }
+  }
