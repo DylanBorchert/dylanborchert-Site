@@ -1,23 +1,20 @@
 import { React, useEffect, useState } from "react";
 import GeometricGradient from "./animated-components/GeometricGradient.js";
 import Footer from "./components/Footer.js";
-import LinkTree from "./components/LinkTree.js";
 import Navbar from "./components/Navbar.js";
 import Osciliator from "./animated-components/Osciliator.js";
 
 function App() {
-  const [osciliator, setOsciliator] = useState(true);
+  let osciliator = true;
 
   useEffect(() => {
-    
-
     //disable if on mobile
     if (window.innerWidth < 768) {
-      setOsciliator(true);
-      Osciliator(true);
+      Osciliator(osciliator);
+      osciliator = true;
     } else {
-      setOsciliator(false);
-      Osciliator(false);
+      Osciliator(osciliator);
+      osciliator = false;
     }
   }, []);
 
@@ -30,14 +27,11 @@ function App() {
       <div className="flex flex-col justify-between min-h-full">
         <Navbar />
         <div className=" ">
-          <p className="text-8xl font-semibold pb-4 hover:font-outline-4 hover:text-transparent text-white">Dylan Borchert</p>
-          <p className="text-4xl font-semibold text-white">Something kinda cool </p>
 
         </div>
 
-        {/* <LinkTree /> */}
+        
         <div></div>
-        <Footer />
       </div>
     </div>
   );

@@ -1,0 +1,36 @@
+.SlideTextContainer {
+    width: 200px;
+    font-weight: bold;
+}
+
+.SlideTextAnimation {
+    height: 30px;
+    overflow:hidden;
+}
+
+.SlideTextAnimation > div > div {
+    display: inline-block;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.SlideTextAnimation:hover div:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.SlideTextAnimation:hover div:nth-child(1) {
+    margin-top: -58px;
+    transform: rotate(-3deg);
+}
+
+.SlideTextAnimation:hover {
+    cursor: pointer;
+}
+
+.SlideTextAnimation div {
+    transition: margin-top 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.SlideTextAnimation div:nth-child(2){
+    transform: rotate(3deg);
+}

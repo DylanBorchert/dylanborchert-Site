@@ -6,14 +6,14 @@ function initOciliator(remove) {
         ctx.globalCompositeOperation = "source-over";
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         ctx.globalCompositeOperation = "lighter";
-        ctx.strokeStyle = "hsla(0, 0%, 100%,0.1)";
+        ctx.strokeStyle = "hsla(204, 98%, 48%,0.25)";
         ctx.lineWidth = 1;
   
-        // if (color == 1) {
-        //   ctx.strokeStyle = "hsla(204, 98%, 48%,0.25)";
-        // } else {
-        //   ctx.strokeStyle = "hsla(255, 100%, 100%,0.25)";
-        // }
+        if (color == 1) {
+          ctx.strokeStyle = "hsla(44, 100%, 52%,0.25)";
+        } else {
+          ctx.strokeStyle = "hsla(204, 98%, 48%,0.25)";
+        }
   
         for (var i = 0, tendril; i < settings.trails; i++) {
           tendril = tendrils[i];
