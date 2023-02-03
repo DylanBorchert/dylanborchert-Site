@@ -1,17 +1,16 @@
 .SlideTextContainer {
-    width: 200px;
     font-weight: bold;
 }
 
 .SlideTextAnimation {
-    height: 30px;
+    height: 2rem;
     overflow:hidden;
 }
 
 .SlideTextAnimation > div > div {
     display: inline-block;
-    height: 30px;
-    margin-bottom: 30px;
+    height: 2rem;
+    margin-bottom: 2rem;
 }
 
 .SlideTextAnimation:hover div:nth-child(2) {
@@ -19,7 +18,7 @@
 }
 
 .SlideTextAnimation:hover div:nth-child(1) {
-    margin-top: -58px;
+    margin-top: -4rem;
     transform: rotate(-3deg);
 }
 
@@ -33,4 +32,5 @@
 
 .SlideTextAnimation div:nth-child(2){
     transform: rotate(3deg);
+    margin-left: -0.063rem;
 }

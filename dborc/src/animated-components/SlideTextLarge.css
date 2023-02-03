@@ -1,0 +1,36 @@
+.SlideTextLargeContainer {
+    font-weight: bold;
+}
+
+.SlideTextLargeAnimation {
+    height: 6rem;
+    overflow:hidden;
+}
+
+.SlideTextLargeAnimation > div > div {
+    display: inline-block;
+    height: 6rem;
+    margin-bottom: 8rem;
+}
+
+.SlideTextLargeAnimation:hover div:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.SlideTextLargeAnimation:hover div:nth-child(1) {
+    margin-top: -7.5rem;
+    transform: rotate(-3deg);
+}
+
+.SlideTextLargeAnimation:hover {
+    cursor: pointer;
+}
+
+.SlideTextLargeAnimation div {
+    transition: margin-top 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.SlideTextLargeAnimation div:nth-child(2){
+    transform: rotate(3deg);
+    margin-left: -0.313rem;
+}
