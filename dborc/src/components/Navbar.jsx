@@ -1,8 +1,8 @@
 import {React, useState }from "react";
-import FlipText from "../animated-components/FlipText.js";
+import FlipText from "../animated-components/FlipText.jsx";
 import { Rotate as Hamburger } from 'hamburger-react'
-import SlideText from "../animated-components/SlideText.js";
-import HamMenu from "./HamMenu.js";
+import SlideText from "../animated-components/SlideText.jsx";
+import HamMenu from "./HamMenu.jsx";
 
 const Navbar = (props) => {
 
@@ -11,10 +11,10 @@ const Navbar = (props) => {
 
     return (
         <>
-        <HamMenu />
+        {isOpen ? <HamMenu /> : null}
         <div className="top-0 pt-8 pl-8 pr-20 flex align-middle justify-between">
             
-            <div className="h-[2rem]">
+            <div className="h-[2rem] z-10 my-auto">
                 <SlideText 
                     text1={
                     <div className="text-primary-1 text-[1rem] tracking-tighter">
@@ -27,20 +27,8 @@ const Navbar = (props) => {
                     }
                 />
             </div>
-            <div className=" translate-y-2">
-                <FlipText
-                    text1={
-                    <div>
-                        <Hamburger color={"#f1f1f1"} size={25} rounded toggled={isOpen} toggle={setOpen}/>
-                    </div>
-                    }
-                    text2={
-                    <div>
-                        <Hamburger color={"#0292F2"} size={25} rounded toggled={isOpen} toggle={setOpen}/>
-                    </div>
-                    }
-                />
-                
+            <div className="">
+                <Hamburger color={"#f1f1f1"} size={25} rounded toggled={isOpen} toggle={setOpen}/>
             </div>
         </div>
         </>

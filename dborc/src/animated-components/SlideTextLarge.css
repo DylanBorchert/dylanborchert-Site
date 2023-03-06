@@ -3,14 +3,22 @@
 }
 
 .SlideTextLargeAnimation {
-    height: 6rem;
-    overflow:hidden;
+    overflow: hidden;
+    position: relative;
+    height: 4rem;
+    /* box-shadow: inset 0px 0px 1px 1px purple; */
 }
 
-.SlideTextLargeAnimation > div > div {
-    display: inline-block;
-    height: 6rem;
-    margin-bottom: 8rem;
+.SlideTextLargeAnimation .SlideTextLargeFirst div, .SlideTextLargeAnimation .SlideTextLargeSecond div {
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* box-shadow: inset 0px 0px 1px 1px green; */
+    margin-bottom: 6rem;
+    position: relative;
+    height: 4rem;
+    
 }
 
 .SlideTextLargeAnimation:hover div:nth-child(2) {
@@ -18,19 +26,19 @@
 }
 
 .SlideTextLargeAnimation:hover div:nth-child(1) {
-    margin-top: -7.5rem;
+    /* margin-top: -7.5rem; */
+    margin-top: -5rem;
     transform: rotate(-3deg);
 }
 
-.SlideTextLargeAnimation:hover {
+.SlideTextLargeAnimation div:hover {
     cursor: pointer;
 }
 
 .SlideTextLargeAnimation div {
-    transition: margin-top 0.3s ease-in, transform 0.3s ease-in;
+    transition: margin-top 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .SlideTextLargeAnimation div:nth-child(2){
     transform: rotate(3deg);
-    margin-left: -0.313rem;
 }
