@@ -17,7 +17,7 @@ const VantaNet = (props) => {
         minWidth: 200.00,
         scaleMobile: 1.00,
         color: 0x0261A1,
-        backgroundColor: 0x000000,
+        backgroundColor: 0x10101A,
         points: 8.00,
         maxDistance: 24.00,
         spacing: 20.00,
@@ -28,7 +28,7 @@ const VantaNet = (props) => {
       if (vantaEffect) vantaEffect.destroy()
     }
   }, [vantaEffect])
-  return <div className={"top-0 w-[100%] h-full -z-[10] " + props.styles} ref={myRef}>
+  return <div className={"top-0 w-[100%] h-[100dvh] -z-[10] " + props.styles} ref={myRef}>
     
   </div>
 }

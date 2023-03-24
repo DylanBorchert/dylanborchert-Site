@@ -1,22 +1,24 @@
 .GeometricGradient {
 	width: 100%;
-    height: 100vh;
+	min-height: 100vh;
+	min-height: 100dvh;
     z-index: -1;
     animation: theme 30s linear infinite;
     position: fixed;
 }
  
 .GeometricGradient:after, .GeometricGradient:before {
-	 content: '';
-	 display: block;
-	 position: fixed;
-	 z-index: -1;
-	 top: 0;
-	 width: 100vw;
-	 height: 100vh;
-	 width: 100vmax;
-	 height: 100vmax;
-	 animation: background 90s linear infinite;
+	content: '';
+	display: block;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	width: 100vw;
+	min-height: 100vh;
+	min-height: 100dvh;
+	width: 100vmax;
+	height: 100vmax;
+	animation: background 90s linear infinite;
 }
 
 

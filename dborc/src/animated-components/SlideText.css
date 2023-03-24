@@ -2,17 +2,18 @@
     overflow: hidden;
     position: relative;
     height: 1.5rem;
+    /* box-shadow: inset 0px 0px 1px 1px purple; */
 }
 
 .SlideTextAnimation .SlideTextFirst div, .SlideTextAnimation .SlideTextSecond div {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 3rem;
     position: relative;
     height: 1.5rem;
-    
+    /* box-shadow: inset 0px 0px 1px 1px green; */
 }
 
 .SlideTextAnimation:hover div:nth-child(2) {
