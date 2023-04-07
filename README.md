@@ -1,4 +1,13 @@
 # Dylan Borchert's Website
 
-Hosted At: 
-http://dylanborchert.ca/ 
+# Hosted At: 
+https://dylanborchert.ca/ 
+
+# Technologies Used:
+- HTML
+- CSS
+- JavaScript
+- Next.js
+- React
+- Strapi CMS
+
