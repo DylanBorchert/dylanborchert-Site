@@ -1,0 +1,38 @@
+.SlideTextAnimation {
+    overflow: hidden;
+    position: relative;
+    height: 1.5rem;
+    /* box-shadow: inset 0px 0px 1px 1px purple; */
+}
+
+.SlideTextAnimation .SlideTextFirst div, .SlideTextAnimation .SlideTextSecond div {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+    height: 1.5rem;
+    /* box-shadow: inset 0px 0px 1px 1px green; */
+}
+
+.SlideTextAnimation:hover div:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.SlideTextAnimation:hover div:nth-child(1) {
+    margin-top: -2.25rem;
+    transform: rotate(-3deg);
+}
+
+.SlideTextAnimation:hover {
+    cursor: pointer;
+}
+
+.SlideTextAnimation div {
+    transition: margin-top 0.2s ease-in, transform 0.2s ease-in;
+}
+
+.SlideTextAnimation div:nth-child(2){
+    transform: rotate(3deg);
+}

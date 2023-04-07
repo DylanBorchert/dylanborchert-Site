@@ -1,0 +1,51 @@
+.SlideTextAnimationSmall {
+    overflow: hidden;
+    position: relative;
+    height: 1.5rem;
+    /* box-shadow: inset 0px 0px 1px 1px purple; */
+}
+
+.SlideTextAnimationSmall .SlideTextFirstSmall div, .SlideTextAnimationSmall .SlideTextSecondSmall div {
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+    height: 1.5rem;
+    /* box-shadow: inset 0px 0px 1px 1px green; */
+}
+
+.SlideTextAnimationSmall:hover div:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.SlideTextAnimationSmall:hover div:nth-child(1) {
+    margin-top: -2.25rem;
+    transform: rotate(-3deg);
+}
+
+.SlideTextAnimationSmall:hover {
+    cursor: pointer;
+}
+
+.SlideTextAnimationSmall div {
+    transition: margin-top 0.2s ease-in, transform 0.2s ease-in;
+}
+
+.SlideTextAnimationSmall div:nth-child(2){
+    transform: rotate(3deg);
+}
+
+.SlideTextAnimationSmall.Trigger div:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.SlideTextAnimationSmall.Trigger div:nth-child(1) {
+    margin-top: -2.25rem;
+    transform: rotate(-3deg);
+}
+
+.SlideTextAnimationSmall.Trigger {
+    cursor: pointer;
+}
