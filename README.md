@@ -4,10 +4,7 @@
 https://dylanborchert.ca/ 
 
 # Technologies Used:
-- HTML
-- CSS
-- JavaScript
+- Tailwind CSS
 - Next.js
-- React
 - Strapi CMS
 

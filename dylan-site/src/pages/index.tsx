@@ -1,7 +1,7 @@
 import React from 'react'
 import VantaNet from '../animated-components/VantaNet'
 import VantaBirds from '../animated-components/VantaBirds'
-import Navbar from '../components/NavBar'
+import Navbar from '../components/Navbar'
 
 
 export default function Home() {
