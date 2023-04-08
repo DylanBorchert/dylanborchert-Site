@@ -4,7 +4,7 @@ import VantaBirds from '../animated-components/VantaBirds'
 import Navbar from '../components/Navbar'
 
 
-export default function Home({commit_msg}) {
+export default function Home({commit_msg}: any) {
   return (
     <div className="w-[100%] h-[100dvh]">
         <VantaNet styles={"fixed top-0 -z-10"}/>
