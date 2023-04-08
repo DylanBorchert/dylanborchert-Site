@@ -11,7 +11,7 @@ const Navbar = (props) => {
 
     return (
         <div className="">
-        {isOpen ? <HamMenu /> : null}
+        {isOpen ? <HamMenu commit_msg={props.commit_msg} /> : null}
             <div className="top-0 pt-8 pl-8 pr-8 flex align-middle justify-between">
                 
                 <div className="h-[2rem] z-10 my-auto">
