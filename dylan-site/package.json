@@ -21,8 +21,11 @@
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-particles": "^2.9.3",
     "tailwindcss": "3.3.1",
     "three": "0.122.0",
+    "tsparticles": "^2.9.3",
     "typescript": "5.0.4",
     "vanta": "^0.5.24"
   }

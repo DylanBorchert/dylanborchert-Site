@@ -4,12 +4,12 @@
 const FlipText = (props) => {
 
  return (
-    <div class="flip-box">
-        <div class="flip-box-inner">
-            <div class="flip-box-front">
+    <div className="flip-box">
+        <div className="flip-box-inner">
+            <div className="flip-box-front">
                 {props.text1 ? props.text1 : 'testtext'}
             </div>
-            <div class="flip-box-back">
+            <div className="flip-box-back">
                 {props.text2 ? props.text2 : 'testtext'}
             </div>
         </div>

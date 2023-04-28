@@ -8,7 +8,6 @@ const Navbar = (props) => {
 
     const [isOpen, setOpen] = useState(false)
 
-
     return (
         <div className="">
         {isOpen ? <HamMenu commit_msg={props.commit_msg} /> : null}
