@@ -7,10 +7,40 @@ import remarkGfm from "remark-gfm";
 
 function ContentProcessor(props) {
 
+  useEffect(() => {
+    console.log(props.content)
+  }, [])
+
 
   return (
     <>
-      <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto ">
+      {props.content.map((item, index) => {
+        switch (item["__component"]) {
+          case 'general.highlight-projects':
+          case 'general.highlight-blog-posts':
+            return (
+              <div key={index}>
+                <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto">
+                  {item["Title"]}
+                </h1>
+                <Carousel key={index} />
+              </div>
+            )
+          case 'general.dynamic-text':
+            return (
+              <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto" remarkPlugins={[remarkGfm]}>
+                {item["Text"]}
+              </ReactMarkdown>
+            )
+          default:
+            return <div className='max-w-[800px] mx-auto text-red-600' key={index}>Need to create {item["__component"]}</div>
+        }
+      })
+
+
+      }
+
+      {/* <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto ">
         My Projects
       </h1>
       <Carousel />
@@ -20,7 +50,7 @@ function ContentProcessor(props) {
       <Carousel />
       <ReactMarkdown className="markdown max-w-[800px] mx-auto" remarkPlugins={[remarkGfm]}>
         {props.content[2]["Text"]}
-      </ReactMarkdown>
+      </ReactMarkdown> */}
     </>
   )
 }

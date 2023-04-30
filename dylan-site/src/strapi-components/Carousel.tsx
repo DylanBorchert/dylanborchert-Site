@@ -31,37 +31,11 @@ const slides = [
     },
     {
         title: "Slide 5",
-        img: "/slide-img/siri.jpeg",
-        imageWidth: 168,
-        imageHeight: 168,
+        img: "/slide-img/automatic-switching.jpeg",
+        imageWidth: 336,
+        imageHeight: 100,
         centered: true,
     },
-    {
-        title: "Slide 6",
-        img: "/slide-img/a11y.jpeg",
-        imageWidth: 135,
-        imageHeight: 135,
-        centered: true,
-    },
-    {
-        title: "Slide 7",
-        img: "/slide-img/one-tap.jpeg",
-        imageWidth: 343,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 8",
-        img: "/slide-img/spatial-audio.jpeg",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 9",
-        img: "/slide-img/audio-sharing.jpeg",
-        imageWidth: 265,
-        imageHeight: 352,
-        centered: true,
-    }
 ];
 
 const slideWidth = 300;
@@ -101,6 +75,8 @@ function Carousel () {
     }, [currentSlide]);
 
 
+
+
     return (
         <div className="font-sans py-3">
             <div className="h-[200px] overflow-hidden relative">
@@ -113,10 +89,10 @@ function Carousel () {
                 >
                     {slides.map((slide) => (
                         <li
-                            className="snap-start snap-always shrink-0 mr-5 last:mr-0"
+                            className="snap-start snap-always shrink-0 mr-5  text-white last:mr-0"
                             key={slide.title}
                         >
-                            <div className="slide-center relative flex h-full flex-col bg-black w-[300px] rounded-2xl shadow-lg">
+                            <div className="slide-center relative flex h-full flex-col bg-slate-900 w-[300px] rounded-2xl shadow-lg">
 
                             </div>
                         </li>
@@ -124,9 +100,10 @@ function Carousel () {
                 </ul>
             </div>
             <div className="absolute w-full translate-y-[-50%] h-[200px] hidden sm:block">
-                <div className="flex justify-between absolute w-full translate-y-[-50%] px-2 pb-5">
+                <div className="flex justify-between absolute w-full translate-y-[-50%] px-2 pb-3">
                     <button
-                        disabled={currentSlide === 0}
+                        // disabled={currentSlide === 0}
+                        disabled={sliderPosition === 0}
                         onClick={() => goToPreviousSlide()}
                         className={"disabled:invisible disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
                     >
