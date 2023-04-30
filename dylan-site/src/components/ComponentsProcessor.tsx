@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import DynamicText from '../strapi-components/DynamicText.jsx'
-import Carousel from '../strapi-components/Carousel.tsx'
+import Carousel from '../strapi-components/Carousel'
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 
-function ContentProcessor(props) {
+function ContentProcessor(props:any) {
 
   useEffect(() => {
     console.log(props.content)
@@ -14,7 +14,7 @@ function ContentProcessor(props) {
 
   return (
     <>
-      {props.content.map((item, index) => {
+      {props.content.map((item:any, index:number) => {
         switch (item["__component"]) {
           case 'general.highlight-projects':
           case 'general.highlight-blog-posts':

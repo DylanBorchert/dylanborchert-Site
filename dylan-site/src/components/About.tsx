@@ -2,10 +2,9 @@ import Navbar from "./Navbar.jsx";
 import VantaNet from "../animated-components/VantaNet.jsx";
 import { useEffect } from "react";
 import Typewriter from 'typewriter-effect';
-import ContentProcessor from "./ComponentsProcessor.jsx"
-import Carousel from "@/strapi-components/Carousel.tsx";
+import ContentProcessor from "./ComponentsProcessor";
 
-function Home(props) {
+function Home(props:any ) {
 
   return (
     <div className="">

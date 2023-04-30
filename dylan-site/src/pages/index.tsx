@@ -5,8 +5,8 @@ import Navbar from '../components/Navbar'
 import Particals from '../animated-components/DotParticals'
 import commitData from '../modules/commitData.js'
 import contentProvider from '../modules/ContentProvider.js'
-import About from '../components/About'
 import Carousel from '../strapi-components/Carousel'
+import About from '../components/About'
 
 
 export default function Home({commit_msg, home_page}: any) {
