@@ -33,7 +33,7 @@ function ContentProcessor(props:any) {
               </ReactMarkdown>
             )
           default:
-            return <div className='max-w-[800px] mx-auto text-red-600' key={index}>Need to create {item["__component"]}</div>
+            console.warn("Unknown component type: " + item["__component"])
         }
       })
 

@@ -24,18 +24,23 @@ const slides = [
     },
     {
         title: "Slide 4",
-        img: "/slide-img/automatic-switching.jpeg",
-        imageWidth: 336,
-        imageHeight: 100,
-        centered: true,
+        img: "/slide-img/one-tap.jpeg",
+        imageWidth: 343,
+        imageHeight: 375,
     },
     {
         title: "Slide 5",
-        img: "/slide-img/automatic-switching.jpeg",
-        imageWidth: 336,
-        imageHeight: 100,
-        centered: true,
+        img: "/slide-img/spatial-audio.jpeg",
+        imageWidth: 211,
+        imageHeight: 375,
     },
+    {
+        title: "Slide 6",
+        img: "/slide-img/audio-sharing.jpeg",
+        imageWidth: 265,
+        imageHeight: 352,
+        centered: true,
+    }
 ];
 
 const slideWidth = 300;
@@ -56,7 +61,7 @@ function Carousel () {
     const [sliderPosition, setSliderPosition] = useState(0);
 
     const currentSlide = useMemo(() => {
-        return Math.floor(sliderPosition / (slideWidth + slideMargin));
+        return Math.ceil(sliderPosition / (slideWidth + slideMargin));
     }, [sliderPosition]);
 
     const scrolledToEndOfSlider = useMemo(() => {
@@ -112,7 +117,7 @@ function Carousel () {
                         <span className="sr-only">Next slide</span>
                     </button>
                     <button
-                        disabled={scrolledToEndOfSlider || currentSlide === slides.length}
+                        disabled={scrolledToEndOfSlider}
                         onClick={() => goToNextSlide()}
                         className={"disabled:invisible disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
                     >

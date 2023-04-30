@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const getHomePage = async function () {
-	console.log(process.env.STRAPI_KEY);
 	axios.defaults.headers.common[
 		"Authorization"
 	] = `bearer ${process.env.STRAPI_KEY}`;
