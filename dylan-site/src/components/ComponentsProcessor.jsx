@@ -7,9 +7,7 @@ import remarkGfm from "remark-gfm";
 
 function ContentProcessor(props) {
 
-  useEffect(() => {
-    console.log(props.content);
-  }, []);
+
   return (
     <>
       <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto ">

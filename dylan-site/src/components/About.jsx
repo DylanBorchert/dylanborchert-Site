@@ -7,10 +7,6 @@ import Carousel from "@/strapi-components/Carousel.tsx";
 
 function Home(props) {
 
-  useEffect(() => {
-    console.log(props.content);
-  }, []);
-
   return (
     <div className="">
       <div className="text-white w-full">

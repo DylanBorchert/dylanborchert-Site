@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export const getCommitData = async function () {
+
+export async function getCommitData () {
 	return axios
 		.get(`https://api.github.com/repos/dborc610/dylanborchert-Site/commits`)
 		.then((response) => {
