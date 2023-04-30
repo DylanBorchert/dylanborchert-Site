@@ -13,7 +13,9 @@ module.exports = {
         'primary-2': '#FFBE0B',
         'primary-3': '#DB4437',
         'primary-4': '#0F9D58'
-
+      },
+      fontFamily: {
+        sans: "SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif",
       },
     },
   },

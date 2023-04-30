@@ -7,28 +7,17 @@ import Socials from "./Socials.jsx";
 import ContactCard from "./ContactCard.jsx";
 
 
-function HamMenu(props) {
+function NavigationMenu(props) {
 
 
     return(
-        <div className="absolute w-full z-10 bg-black flex flex-col align-middle justify-around h-[100dvh]">
+        <div className="absolute w-full bg-black flex flex-col align-middle justify-around h-[100dvh] z-20">
             <div className="h-24 relative text-white">
             </div>
             <div className="w-full flex flex-row m-auto">
                 <div className="flex-grow"></div>
                 <div className="m-auto w-[500px] grid sm:grid-cols-2 grid-cols-1 mx-8">
                     <div className="mr-auto">
-                       <SlideTextLarge
-                            text1={
-                            <div className=" text-white">
-                                Projects
-                            </div>} 
-                            text2={
-                            <div className="text-transparent font-outline-white">
-                                Projects
-                            </div>
-                            }
-                        />
                         <SlideTextLarge
                             text1={
                             <div className="text-white">
@@ -37,6 +26,17 @@ function HamMenu(props) {
                             text2={
                             <div className="text-transparent font-outline-white">
                                 About
+                            </div>
+                            }
+                        />
+                       <SlideTextLarge
+                            text1={
+                            <div className=" text-white">
+                                Projects
+                            </div>} 
+                            text2={
+                            <div className="text-transparent font-outline-white">
+                                Projects
                             </div>
                             }
                         />
@@ -76,4 +76,4 @@ function HamMenu(props) {
     )
 }
 
-export default HamMenu;
+export default NavigationMenu;
