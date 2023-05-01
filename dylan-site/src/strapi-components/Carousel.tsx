@@ -5,42 +5,39 @@ import classNames from "classnames";
 const slides = [
     {
         title: "Slide 1",
-        img: "/slide-img/one-tap.jpeg",
         imageWidth: 343,
         imageHeight: 375,
     },
     {
         title: "Slide 2",
-        img: "/slide-img/spatial-audio.jpeg",
         imageWidth: 211,
         imageHeight: 375,
     },
     {
         title: "Slide 3",
-        img: "/slide-img/audio-sharing.jpeg",
-        imageWidth: 265,
-        imageHeight: 352,
-        centered: true,
+        imageWidth: 211,
+        imageHeight: 375,
     },
     {
         title: "Slide 4",
-        img: "/slide-img/one-tap.jpeg",
-        imageWidth: 343,
+        imageWidth: 211,
         imageHeight: 375,
     },
     {
         title: "Slide 5",
-        img: "/slide-img/spatial-audio.jpeg",
         imageWidth: 211,
         imageHeight: 375,
     },
     {
         title: "Slide 6",
-        img: "/slide-img/audio-sharing.jpeg",
-        imageWidth: 265,
-        imageHeight: 352,
-        centered: true,
-    }
+        imageWidth: 211,
+        imageHeight: 375,
+    },
+    {
+        title: "Slide 7",
+        imageWidth: 211,
+        imageHeight: 375,
+    },
 ];
 
 const slideWidth = 300;
@@ -55,10 +52,12 @@ const scrollToSlide = (slider: HTMLUListElement | null, slideIndex: number) => {
 };
 
 
-function Carousel () {
+function Carousel() {
 
     const sliderRef = useRef<HTMLUListElement | null>(null);
     const [sliderPosition, setSliderPosition] = useState(0);
+    const [hasScrollableArea, setHasScrollableArea] = useState(false);
+    const [dimensions, setDimensions] = useState();
 
     const currentSlide = useMemo(() => {
         return Math.ceil(sliderPosition / (slideWidth + slideMargin));
@@ -79,6 +78,20 @@ function Carousel () {
         scrollToSlide(sliderRef.current, currentSlide - 1);
     }, [currentSlide]);
 
+    const handleResize = useCallback(() => {
+        if (!sliderRef.current) return;
+        setHasScrollableArea(sliderRef.current.scrollWidth > sliderRef.current.clientWidth);
+    }, []);
+
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize, false);
+        if (!sliderRef.current) {
+            setHasScrollableArea(false);
+        } else {
+            setHasScrollableArea(sliderRef.current.scrollWidth > sliderRef.current.clientWidth)
+        }
+    }, []);
 
 
 
@@ -97,7 +110,7 @@ function Carousel () {
                             className="snap-start snap-always shrink-0 mr-5  text-white last:mr-0"
                             key={slide.title}
                         >
-                            <div className="slide-center relative flex h-full flex-col bg-slate-900 w-[300px] rounded-2xl shadow-lg">
+                            <div className="slide-center relative flex h-full flex-col bg-black w-[300px] rounded-2xl shadow-lg">
 
                             </div>
                         </li>
@@ -107,7 +120,6 @@ function Carousel () {
             <div className="absolute w-full translate-y-[-50%] h-[200px] hidden sm:block">
                 <div className="flex justify-between absolute w-full translate-y-[-50%] px-2 pb-3">
                     <button
-                        // disabled={currentSlide === 0}
                         disabled={sliderPosition === 0}
                         onClick={() => goToPreviousSlide()}
                         className={"disabled:invisible disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
@@ -117,7 +129,7 @@ function Carousel () {
                         <span className="sr-only">Next slide</span>
                     </button>
                     <button
-                        disabled={scrolledToEndOfSlider}
+                        disabled={scrolledToEndOfSlider || currentSlide === slides.length || !hasScrollableArea}
                         onClick={() => goToNextSlide()}
                         className={"disabled:invisible disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
                     >
