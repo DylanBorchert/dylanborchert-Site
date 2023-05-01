@@ -96,14 +96,14 @@ function Carousel() {
 
 
     return (
-        <div className="font-sans py-3">
+        <div className="font-sans group">
             <div className="h-[200px] overflow-hidden relative">
                 <ul
                     ref={sliderRef}
                     onScroll={(ev) => {
                         setSliderPosition(ev.currentTarget.scrollLeft);
                     }}
-                    className="flex h-[240px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory"
+                    className="flex h-[240px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows "
                 >
                     {slides.map((slide) => (
                         <li
@@ -117,12 +117,12 @@ function Carousel() {
                     ))}
                 </ul>
             </div>
-            <div className="absolute w-full translate-y-[-50%] h-[200px] hidden sm:block">
+            <div className="absolute w-full translate-y-[-100%] h-[100px] hidden sm:block opacity-0 group-hover:opacity-100 duration-700">
                 <div className="flex justify-between absolute w-full translate-y-[-50%] px-2 pb-3">
                     <button
                         disabled={sliderPosition === 0}
                         onClick={() => goToPreviousSlide()}
-                        className={"disabled:invisible disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
+                        className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
                     >
                         <Chevron className="w-3 h-3 text-white" />
                         <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
@@ -131,7 +131,7 @@ function Carousel() {
                     <button
                         disabled={scrolledToEndOfSlider || currentSlide === slides.length || !hasScrollableArea}
                         onClick={() => goToNextSlide()}
-                        className={"disabled:invisible disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
+                        className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
                     >
                         <Chevron className="rotate-180 w-3 h-3 text-white" />
                         <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
