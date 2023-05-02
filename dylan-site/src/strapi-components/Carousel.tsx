@@ -120,27 +120,27 @@ function Carousel() {
                     ))}
                 </ul>
             </div>
-            <div className="absolute w-full translate-y-[-100%] h-[100px] hidden sm:block opacity-0 group-hover:opacity-100 duration-700">
-                <div className="flex justify-between absolute w-full translate-y-[-50%] px-2 pb-3">
-                    <button
-                        disabled={sliderPosition === 0}
-                        onClick={() => goToPreviousSlide()}
-                        className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
-                    >
-                        <Chevron className="w-3 h-3 text-white" />
-                        <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
-                        <span className="sr-only">Next slide</span>
-                    </button>
-                    <button
-                        disabled={scrolledToEndOfSlider || currentSlide === slides.length || !hasScrollableArea}
-                        onClick={() => goToNextSlide()}
-                        className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center hover:scale-110 transform transition-all duration-500"}
-                    >
-                        <Chevron className="rotate-180 w-3 h-3 text-white" />
-                        <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
-                        <span className="sr-only">Next slide</span>
-                    </button>
-                </div>
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-100px] pl-5">
+                <button
+                    disabled={sliderPosition === 0}
+                    onClick={() => goToPreviousSlide()}
+                    className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 transform transition-all duration-500"}
+                >
+                    <Chevron className="w-3 h-3 text-white" />
+                    <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
+                    <span className="sr-only">Next slide</span>
+                </button>
+            </div>
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-100px] pr-5">
+                <button
+                    disabled={scrolledToEndOfSlider || currentSlide === slides.length || !hasScrollableArea}
+                    onClick={() => goToNextSlide()}
+                    className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 transform transition-all duration-500"}
+                >
+                    <Chevron className="rotate-180 w-3 h-3 text-white" />
+                    <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
+                    <span className="sr-only">Next slide</span>
+                </button>
             </div>
         </div>
     )
