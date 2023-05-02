@@ -8,7 +8,7 @@ function Home(props:any ) {
   return (
     <div className="">
       <div className="text-white w-full">
-        <div className="max-w-[800px] mx-auto my-20">
+        <div className="max-w-[800px] mx-auto my-20 pl-5">
           <h1 className=" font-bold text-5xl my-2 ">
             {props.content.title}
           </h1>

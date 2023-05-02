@@ -20,7 +20,7 @@ function ContentProcessor(props:any) {
           case 'general.highlight-blogs':
             return (
               <div key={index}>
-                <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto">
+                <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
                   {item["title"]}
                 </h1>
                 <Carousel key={index} />
@@ -28,7 +28,7 @@ function ContentProcessor(props:any) {
             )
           case 'general.markdown':
             return (
-              <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto" remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto px-5" remarkPlugins={[remarkGfm]}>
                 {item["text"]}
               </ReactMarkdown>
             )

@@ -41,9 +41,11 @@ const slides = [
 ];
 
 const slideWidth = 300;
-const slideMargin = 20;
+const slideMargin = 40;
 
 const scrollToSlide = (slider: HTMLUListElement | null, slideIndex: number) => {
+    console.log(slider);
+    console.log(slideIndex);
     if (!slider) return;
     slider.scrollTo({
         left: slideIndex * (slideWidth + slideMargin),
@@ -57,7 +59,6 @@ function Carousel() {
     const sliderRef = useRef<HTMLUListElement | null>(null);
     const [sliderPosition, setSliderPosition] = useState(0);
     const [hasScrollableArea, setHasScrollableArea] = useState(false);
-    const [dimensions, setDimensions] = useState();
 
     const currentSlide = useMemo(() => {
         return Math.ceil(sliderPosition / (slideWidth + slideMargin));
@@ -86,12 +87,14 @@ function Carousel() {
 
     useEffect(() => {
         window.addEventListener("resize", handleResize, false);
+        console.log(sliderPosition);
+
         if (!sliderRef.current) {
             setHasScrollableArea(false);
         } else {
             setHasScrollableArea(sliderRef.current.scrollWidth > sliderRef.current.clientWidth)
         }
-    }, []);
+    }, [sliderPosition]);
 
 
 
@@ -103,11 +106,11 @@ function Carousel() {
                     onScroll={(ev) => {
                         setSliderPosition(ev.currentTarget.scrollLeft);
                     }}
-                    className="flex h-[240px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows "
+                    className="flex h-[240px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows"
                 >
                     {slides.map((slide) => (
                         <li
-                            className="snap-start snap-always shrink-0 mr-5  text-white last:mr-0"
+                            className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 last:mr-5"
                             key={slide.title}
                         >
                             <div className="slide-center relative flex h-full flex-col bg-black w-[300px] rounded-2xl shadow-lg">
