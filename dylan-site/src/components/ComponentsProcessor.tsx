@@ -17,19 +17,19 @@ function ContentProcessor(props:any) {
       {props.content.map((item:any, index:number) => {
         switch (item["__component"]) {
           case 'general.highlight-projects':
-          case 'general.highlight-blog-posts':
+          case 'general.highlight-blogs':
             return (
               <div key={index}>
                 <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto">
-                  {item["Title"]}
+                  {item["title"]}
                 </h1>
                 <Carousel key={index} />
               </div>
             )
-          case 'general.dynamic-text':
+          case 'general.markdown':
             return (
               <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto" remarkPlugins={[remarkGfm]}>
-                {item["Text"]}
+                {item["text"]}
               </ReactMarkdown>
             )
           default:

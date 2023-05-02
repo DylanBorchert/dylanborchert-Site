@@ -11,7 +11,7 @@ function Home(props:any ) {
       <div className="text-white w-full">
         <div className="max-w-[800px] mx-auto my-20">
           <h1 className=" font-bold text-5xl my-2 ">
-            {props.content.name}
+            {props.content.title}
           </h1>
           <div className="text-md">
             <Typewriter

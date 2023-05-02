@@ -25,7 +25,7 @@ function ContactCard() {
 
 	const downloadResume = () => {
 		downloadFile(
-			"https://strapi.phantommedia.online/uploads/Dylan_Borchert_Resume_ee8c14a393.pdf",
+			"https://strapi.phantommedia.online/uploads/resume_402321f841.pdf",
 			"Dylan_Borchert_Resume.pdf"
 		);
 	};
@@ -35,7 +35,7 @@ function ContactCard() {
 			<div className="text-white group hover:text-primary-1 transition duration-150 ease-out hover:ease-in shadow-md flex flex-row-reverse mr-auto mb-1 m-0">
 
 				<a
-					href="https://strapi.phantommedia.online/uploads/Dylan_Borchert_Resume_ee8c14a393.pdf"
+					href="https://strapi.phantommedia.online/uploads/resume_402321f841.pdf"
 					target="_blank"
 					className="flex"
 				>
