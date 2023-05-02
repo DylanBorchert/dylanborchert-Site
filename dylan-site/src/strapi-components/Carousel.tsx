@@ -120,7 +120,7 @@ function Carousel() {
                     ))}
                 </ul>
             </div>
-            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-100px] pl-5">
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-100px] pl-5 sm:block hidden">
                 <button
                     disabled={sliderPosition === 0}
                     onClick={() => goToPreviousSlide()}
@@ -131,7 +131,7 @@ function Carousel() {
                     <span className="sr-only">Next slide</span>
                 </button>
             </div>
-            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-100px] pr-5">
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-100px] pr-5 sm:block hidden">
                 <button
                     disabled={scrolledToEndOfSlider || currentSlide === slides.length || !hasScrollableArea}
                     onClick={() => goToNextSlide()}
