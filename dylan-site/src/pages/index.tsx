@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react'
-import VantaNet from '../animated-components/VantaNet'
-import VantaBirds from '../animated-components/VantaBirds'
 import Navbar from '../components/Navbar'
 import Particals from '../animated-components/DotParticals'
 import commitData from '../modules/commitData.js'
 import contentProvider from '../modules/ContentProvider.js'
-import Carousel from '../strapi-components/Carousel'
 import About from '../components/About'
 
 
