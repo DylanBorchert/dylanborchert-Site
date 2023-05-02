@@ -1,5 +1,4 @@
 import Navbar from "./Navbar.jsx";
-import VantaNet from "../animated-components/VantaNet.jsx";
 import { useEffect } from "react";
 import Typewriter from 'typewriter-effect';
 import ContentProcessor from "./ComponentsProcessor";
