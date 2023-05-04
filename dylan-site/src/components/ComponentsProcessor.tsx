@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 function ContentProcessor(props:any) {
 
   useEffect(() => {
-    console.log(props.content)
+    
   }, [])
 
 
@@ -23,13 +23,13 @@ function ContentProcessor(props:any) {
                 <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
                   {item["title"]}
                 </h1>
-                <Carousel key={index} />
+                <Carousel content={item.blogposts ? item.blogposts.data : item.projects.data}/>
               </div>
             )
           case 'general.markdown':
             return (
-              <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto px-5" remarkPlugins={[remarkGfm]}>
-                {item["text"]}
+              <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto px-5 my-5" remarkPlugins={[remarkGfm]}>
+                {item["text"]} 
               </ReactMarkdown>
             )
           default:

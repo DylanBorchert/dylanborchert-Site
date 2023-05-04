@@ -2,44 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Chevron } from "../icons/chevron";
 import classNames from "classnames";
 
-const slides = [
-    {
-        title: "Slide 1",
-        imageWidth: 343,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 2",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 3",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 4",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 5",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 6",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-    {
-        title: "Slide 7",
-        imageWidth: 211,
-        imageHeight: 375,
-    },
-];
-
 const slideWidth = 300;
 const slideMargin = 40;
 
@@ -54,7 +16,7 @@ const scrollToSlide = (slider: HTMLUListElement | null, slideIndex: number) => {
 };
 
 
-function Carousel() {
+function Carousel(props:any) {
 
     const sliderRef = useRef<HTMLUListElement | null>(null);
     const [sliderPosition, setSliderPosition] = useState(0);
@@ -87,40 +49,51 @@ function Carousel() {
 
     useEffect(() => {
         window.addEventListener("resize", handleResize, false);
-        console.log(sliderPosition);
-
         if (!sliderRef.current) {
             setHasScrollableArea(false);
         } else {
             setHasScrollableArea(sliderRef.current.scrollWidth > sliderRef.current.clientWidth)
         }
+        console.log(props.content)
     }, [sliderPosition]);
 
 
 
     return (
         <div className="font-sans group">
-            <div className="h-[200px] overflow-hidden relative">
+            <div className="h-[250px] overflow-hidden relative">
                 <ul
                     ref={sliderRef}
                     onScroll={(ev) => {
                         setSliderPosition(ev.currentTarget.scrollLeft);
                     }}
-                    className="flex h-[240px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows"
+                    className="flex h-[340px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows"
                 >
-                    {slides.map((slide) => (
+                    {props.content.map((slide:any) => (
                         <li
-                            className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 last:mr-5"
-                            key={slide.title}
+                            className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 py-2 last:mr-5"
+                            key={slide.id}
                         >
-                            <div className="slide-center relative flex h-full flex-col bg-black w-[300px] rounded-2xl shadow-lg">
-
+                            <div className="slide-center relative flex flex-col w-[300px] shadow-lg">
+                                <div className="bg-black aspect-[4/3] rounded-2xl hover:scale-[102%] transition-all duration-500 overflow-hidden flex-col flex justify-end">
+                                    <div className=" absolute top-0">
+                                        <p className=" font-semibold px-2 pt-2">
+                                            {slide.attributes.title}
+                                        </p>
+                                        <p className=" text-xs px-2">
+                                            {slide.attributes.summary}
+                                        </p>
+                                    </div>
+                                    <div className=" aspect-[5/3] object-cover realative flex-col justify-center bg-[#0F0F0F]">
+                                        <p className="font-semibold w-full text-center absolute top-[50%] translate-y-[50%] mix-blend-exclusion">{slide.attributes.title}</p>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-100px] pl-5 sm:block hidden">
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-125px] pl-8 sm:block hidden">
                 <button
                     disabled={sliderPosition === 0}
                     onClick={() => goToPreviousSlide()}
@@ -131,9 +104,9 @@ function Carousel() {
                     <span className="sr-only">Next slide</span>
                 </button>
             </div>
-            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-100px] pr-5 sm:block hidden">
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-125px] pr-8 sm:block hidden">
                 <button
-                    disabled={scrolledToEndOfSlider || currentSlide === slides.length || !hasScrollableArea}
+                    disabled={scrolledToEndOfSlider || currentSlide === props.content.length || !hasScrollableArea}
                     onClick={() => goToNextSlide()}
                     className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 transform transition-all duration-500"}
                 >

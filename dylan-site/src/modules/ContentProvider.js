@@ -9,7 +9,8 @@ export const getHomePage = async function () {
 		`https://strapi.phantommedia.online/api/home-page`,
 		{
 			params: {
-				"populate[content][populate]": "*",
+				"populate[content][populate][projects][populate]": "cover",
+				"populate[content][populate][blogposts][populate]": "cover",
 			},
 		}
 	);
