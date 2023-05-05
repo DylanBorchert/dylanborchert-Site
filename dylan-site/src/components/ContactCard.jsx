@@ -32,7 +32,7 @@ function ContactCard() {
 
 	return (
 		<div className="w-full sm:col-span-2 sm:mt-2 pt-2 border-t-2 border-gray-800 flex sm:flex-row justify-between flex-col">
-			<div className="text-white group hover:text-primary-1 transition duration-150 ease-out hover:ease-in shadow-md flex flex-row-reverse mr-auto mb-1 m-0">
+			<div className="text-white transition duration-150 ease-out hover:ease-in shadow-md flex flex-row-reverse mr-auto mb-1 m-0">
 
 				<a
 					href="https://strapi.phantommedia.online/uploads/resume_402321f841.pdf"
@@ -40,7 +40,7 @@ function ContactCard() {
 					className="flex"
 				>
 					<div className="flex justify-between">
-						<p className="text-sm px-1 text-white text-md my-auto group-hover:text-primary-1">
+						<p className="text-sm px-1 text-white text-md my-auto hover:text-primary-1">
 							view resume
 						</p>
 					</div>

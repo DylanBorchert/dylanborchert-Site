@@ -5,6 +5,7 @@ import SlideTextLarge from "../animated-components/SlideTextLarge.jsx";
 import axios from "axios";
 import Socials from "./Socials.jsx";
 import ContactCard from "./ContactCard.jsx";
+import Link from 'next/link';
 
 
 function NavigationMenu(props) {
@@ -18,39 +19,45 @@ function NavigationMenu(props) {
                 <div className="flex-grow"></div>
                 <div className="m-auto w-[500px] grid sm:grid-cols-2 grid-cols-1 mx-8">
                     <div className="mr-auto">
-                        <SlideTextLarge
-                            text1={
-                            <div className="text-white">
-                                About
-                            </div>} 
-                            text2={
-                            <div className="text-transparent font-outline-white">
-                                About
-                            </div>
-                            }
-                        />
-                       <SlideTextLarge
-                            text1={
-                            <div className=" text-white">
-                                Projects
-                            </div>} 
-                            text2={
-                            <div className="text-transparent font-outline-white">
-                                Projects
-                            </div>
-                            }
-                        />
-                        <SlideTextLarge
-                            text1={
-                            <div className="text-white">
-                                Blog
-                            </div>} 
-                            text2={
-                            <div className="text-transparent font-outline-white">
-                                Blog
-                            </div>
-                            }
-                        /> 
+                        <Link href="/NotFound">
+                            <SlideTextLarge
+                                text1={
+                                <div className="text-white">
+                                    About
+                                </div>} 
+                                text2={
+                                <div className="text-transparent font-outline-white">
+                                    About
+                                </div>
+                                }
+                            />
+                        </Link>
+                        <Link href="/NotFound">
+                            <SlideTextLarge
+                                text1={
+                                <div className=" text-white">
+                                    Projects
+                                </div>} 
+                                text2={
+                                <div className="text-transparent font-outline-white">
+                                    Projects
+                                </div>
+                                }
+                            />
+                        </Link>
+                        <Link href="/NotFound">
+                            <SlideTextLarge
+                                text1={
+                                <div className="text-white">
+                                    Blog
+                                </div>} 
+                                text2={
+                                <div className="text-transparent font-outline-white">
+                                    Blog
+                                </div>
+                                }
+                            /> 
+                        </Link>
                     </div>
                     <Socials />
                     <ContactCard />

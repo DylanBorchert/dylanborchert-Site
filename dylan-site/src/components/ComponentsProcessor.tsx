@@ -3,6 +3,7 @@ import DynamicText from '../strapi-components/DynamicText.jsx'
 import Carousel from '../strapi-components/Carousel'
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import SocialsCard from '../strapi-components/SocialsCard.jsx'
 
 
 function ContentProcessor(props:any) {
@@ -31,6 +32,15 @@ function ContentProcessor(props:any) {
               <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto px-5 my-5" remarkPlugins={[remarkGfm]}>
                 {item["text"]} 
               </ReactMarkdown>
+            )
+          case 'general.socials':
+            return (
+              <div key={index}>
+                <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
+                  {item["title"]}
+                </h1>
+                  <SocialsCard />
+              </div>
             )
           default:
             console.warn("Unknown component type: " + item["__component"])
