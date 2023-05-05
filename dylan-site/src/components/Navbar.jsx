@@ -11,7 +11,7 @@ const Navbar = (props) => {
     return (
         <div className="z-40">
         {isOpen ? <NavigationMenu commit_msg={props.commit_msg} /> : null}
-            <div className="pt-8 px-5 flex align-middle justify-between debug-s w-full fixed top-0 z-20">
+            <div className="pt-8 px-5 flex align-middle justify-between w-full fixed top-0 z-20">
                 
                 <div className="h-[2rem] z-20 my-auto">
                     <SlideText 
