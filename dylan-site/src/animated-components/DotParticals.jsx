@@ -5,7 +5,7 @@ import { loadFull } from "tsparticles";
 
 const DotParticals = (props) => {
 	const particlesInit = useCallback(async engine => {
-        console.log(engine);
+        // console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
@@ -13,18 +13,19 @@ const DotParticals = (props) => {
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        await console.log(container);
+        // await console.log(container);
     }, []);
 
     return (
         <Particles
+            className="-z-10 absolute w-full h-full"
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
                 background: {
                     color: {
-                        value: "#090910",
+                        value: "#101020",
                     },
                 },
                 fpsLimit: 120,

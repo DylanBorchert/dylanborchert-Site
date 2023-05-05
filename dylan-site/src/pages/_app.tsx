@@ -1,8 +1,5 @@
 import '@/styles/globals.css'
-import '../styles/SlideTextSmall.css';
-import '../styles/SlideTextLarge.css';
-import '../styles/SlideText.css';
-import '../styles/FlipText.css';
+import '../styles/component.css';
 
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react'

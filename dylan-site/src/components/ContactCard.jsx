@@ -25,22 +25,22 @@ function ContactCard() {
 
 	const downloadResume = () => {
 		downloadFile(
-			"https://strapi.phantommedia.online/uploads/Dylan_Borchert_Resume_ee8c14a393.pdf",
+			"https://strapi.phantommedia.online/uploads/resume_402321f841.pdf",
 			"Dylan_Borchert_Resume.pdf"
 		);
 	};
 
 	return (
 		<div className="w-full sm:col-span-2 sm:mt-2 pt-2 border-t-2 border-gray-800 flex sm:flex-row justify-between flex-col">
-			<div className="text-white group hover:text-primary-1 transition duration-150 ease-out hover:ease-in shadow-md flex flex-row-reverse mr-auto mb-1 m-0">
+			<div className="text-white transition duration-150 ease-out hover:ease-in shadow-md flex flex-row-reverse mr-auto mb-1 m-0">
 
 				<a
-					href="https://strapi.phantommedia.online/uploads/Dylan_Borchert_Resume_ee8c14a393.pdf"
+					href="https://strapi.phantommedia.online/uploads/resume_402321f841.pdf"
 					target="_blank"
 					className="flex"
 				>
 					<div className="flex justify-between">
-						<p className="text-sm px-1 text-white text-md my-auto group-hover:text-primary-1">
+						<p className="text-sm px-1 text-white text-md my-auto hover:text-primary-1">
 							view resume
 						</p>
 					</div>
@@ -77,9 +77,9 @@ function ContactCard() {
 					<g
 						fill="none"
 						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth="2"
 					>
 						<path d="M8 4v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7.242a2 2 0 0 0-.602-1.43L16.083 2.57A2 2 0 0 0 14.685 2H10a2 2 0 0 0-2 2Z" />
 						<path d="M16 18v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2" />
