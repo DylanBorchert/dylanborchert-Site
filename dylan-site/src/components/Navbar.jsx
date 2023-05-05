@@ -9,9 +9,9 @@ const Navbar = (props) => {
     const [isOpen, setOpen] = useState(false)
 
     return (
-        <div className="z-20">
+        <div className="z-40">
         {isOpen ? <NavigationMenu commit_msg={props.commit_msg} /> : null}
-            <div className="top-0 pt-8 px-5 flex align-middle justify-between">
+            <div className="pt-8 px-5 flex align-middle justify-between debug-s w-full fixed top-0 z-20">
                 
                 <div className="h-[2rem] z-20 my-auto">
                     <SlideText 

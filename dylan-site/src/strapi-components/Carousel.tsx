@@ -84,8 +84,8 @@ function Carousel(props:any) {
                                             {slide.attributes.summary}
                                         </p>
                                     </div>
-                                    <div className=" aspect-[5/3] object-cover realative flex-col justify-center bg-[#0F0F0F]">
-                                        <p className="font-semibold w-full text-center absolute top-[50%] translate-y-[50%] mix-blend-exclusion">{slide.attributes.title}</p>
+                                    <div className=" aspect-[5/3] object-cover realative flex-col justify-center bg-black border-[#101010] border-2">
+                                        <p className="font-semibold w-full text-center absolute top-[50%] translate-y-[50%] text-[#101020]">{slide.attributes.title}</p>
                                     </div>
                                 </div>
                             </div>
