@@ -12,7 +12,7 @@ function NavigationMenu(props) {
 
 
     return(
-        <div className="absolute w-full bg-black flex flex-col align-middle justify-around h-[100dvh] z-20">
+        <div className="fixed w-full bg-black flex flex-col align-middle justify-around h-[100dvh] z-20 animate-fade-down-nav">
             <div className="h-24 relative text-white">
             </div>
             <div className="w-full flex flex-row m-auto">
