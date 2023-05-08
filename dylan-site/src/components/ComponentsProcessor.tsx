@@ -33,15 +33,6 @@ function ContentProcessor(props:any) {
                 {item["text"]} 
               </ReactMarkdown>
             )
-          case 'general.socials':
-            return (
-              <div key={index}>
-                <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
-                  {item["title"]}
-                </h1>
-                  <SocialsCard />
-              </div>
-            )
           default:
             console.warn("Unknown component type: " + item["__component"])
         }

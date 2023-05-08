@@ -2,6 +2,7 @@ import Navbar from "./Navbar.jsx";
 import { useEffect } from "react";
 import Typewriter from 'typewriter-effect';
 import ContentProcessor from "./ComponentsProcessor";
+import SocialsCard from "@/strapi-components/SocialsCard.jsx";
 
 function Home(props:any ) {
 
@@ -23,6 +24,7 @@ function Home(props:any ) {
               }}
             />
           </div>
+          {/* <SocialsCard /> */}
         </div>
         <ContentProcessor content={props.content.content} />
         
