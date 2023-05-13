@@ -1,4 +1,4 @@
-import {React, useState, useEffect }from "react";
+import {React, useState, useEffect, useMemo }from "react";
 import FlipText from "../animated-components/FlipText.jsx";
 import { Rotate as Hamburger } from 'hamburger-react'
 import SlideText from "../animated-components/SlideText.jsx";
@@ -18,7 +18,7 @@ const Navbar = (props) => {
         }
         window.scrollTo(scrollOptions);
     }
-
+    
     useEffect(() => {
         let scrollbarWidth = window.innerWidth - document.body.clientWidth;
         if(scrollbarWidth > 0 ) setScrollWidth(scrollbarWidth);
