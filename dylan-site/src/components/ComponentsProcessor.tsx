@@ -19,6 +19,7 @@ function ContentProcessor(props:any) {
         switch (item["__component"]) {
           case 'general.highlight-projects':
           case 'general.highlight-blogs':
+            break; // disable till finished
             return (
               <div key={index}>
                 <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
