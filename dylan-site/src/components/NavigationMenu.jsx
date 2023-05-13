@@ -64,7 +64,7 @@ function NavigationMenu(props) {
                 </div>
                 <div className="flex-grow"></div>
             </div>
-            <div className="text-white w-full px-8 pb-4 text-xs flex justify-between debug-s"> 
+            <div className="text-white w-full px-8 pb-4 text-xs flex justify-between"> 
                 <div className="py-2">
                     <b>Dylan Borchert</b> © {new Date().getFullYear()}.
                 </div>
