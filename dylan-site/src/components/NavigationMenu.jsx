@@ -64,8 +64,16 @@ function NavigationMenu(props) {
                 </div>
                 <div className="flex-grow"></div>
             </div>
-            <div className="text-white w-full px-8 pb-4 text-xs"> 
-                <span className="float-right hidden sm:block">
+            <div className="text-white w-full px-8 pb-4 text-xs flex justify-between debug-s"> 
+                <div className="py-2">
+                    <b>Dylan Borchert</b> © {new Date().getFullYear()}.
+                </div>
+                <div>
+                    <span className="float-left bg-primary-1 p-2 rounded-md hidden">
+                        Contact
+                    </span>
+                </div>
+                <span className="hidden py-2 sm:block">
                     Last updated on {props.commit_msg[1]} [
                     <a
                         href={`https://github.com/dborc610/dylanborchert-Site/commit/${props.commit_msg[0]}`}
@@ -77,7 +85,6 @@ function NavigationMenu(props) {
                     </a>
                     ]
                 </span>
-                <b>Dylan Borchert</b> © {new Date().getFullYear()}.
             </div>
         </div>
     )
