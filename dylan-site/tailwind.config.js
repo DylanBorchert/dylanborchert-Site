@@ -21,8 +21,8 @@ module.exports = {
 			},
 			keyframes: {
 				"fade-down-nav": {
-					'0%': {opacity: "0",top: "-100px",},
-					'50%': {opacity: "1"},
+					'0%': {opacity: "0",top: "-200px",},
+					'50%': {opacity: "1",top: "-100px", },
 					'100%': {opacity: "1",top: "0",},
 				},
 			},
