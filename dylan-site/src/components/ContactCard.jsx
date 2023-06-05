@@ -40,14 +40,14 @@ function ContactCard() {
 					className="flex"
 				>
 					<div className="flex justify-between">
-						<p className="text-sm px-1 text-white text-md my-auto hover:text-primary-1">
+						<p className="text-sm pl-5 text-white text-md my-auto hover:text-primary-1">
 							view resume
 						</p>
 					</div>
 				</a>
 				<svg
 					onClick={downloadResume}
-					className="w-9 h-9 fill-current my-auto text-white hover:text-primary-1 transition duration-150 ease-out hover:ease-in rounded-md p-1 ml-1 hover:cursor-pointer hover:shadow-md border border-spacing-3 border-gray-800 hover:border-primary-1"
+					className="w-10 h-10 fill-current my-auto text-white hover:text-primary-1 transition duration-150 ease-out hover:ease-in rounded-md p-1 ml-1 hover:cursor-pointer hover:shadow-md border border-spacing-3 border-gray-800 hover:border-primary-1"
 					xmlns="http://www.w3.org/2000/svg"
 					role="img"
 					viewBox="0 0 1024 1024"
@@ -62,14 +62,14 @@ function ContactCard() {
 					className="flex"
 				>
 					<div className="flex justify-between">
-						<p className="text-sm px-1 text-white text-md font-semibold my-auto group-hover:text-primary-1">
+						<p className="text-sm pr-5 text-white text-md font-semibold my-auto group-hover:text-primary-1">
 							dborc610@mtroyal.ca
 						</p>
 					</div>
 				</a>
 				<svg
 					onClick={copyToClipboard}
-					className="w-9 h-9 fill-current my-auto text-white hover:text-primary-1 transition duration-150 ease-out hover:ease-in rounded-md p-1 ml-1 hover:cursor-pointer hover:shadow-md border border-spacing-3 border-gray-800 hover:border-primary-1"
+					className="w-10 h-10 fill-current my-auto text-white hover:text-primary-1 transition duration-150 ease-out hover:ease-in rounded-md p-1 ml-1 hover:cursor-pointer hover:shadow-md border border-spacing-3 border-gray-800 hover:border-primary-1"
 					xmlns="http://www.w3.org/2000/svg"
 					role="img"
 					viewBox="0 0 24 24"

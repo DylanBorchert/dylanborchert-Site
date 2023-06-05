@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Chevron } from "../icons/chevron";
 import classNames from "classnames";
+import Link from "next/link";
 
 const slideWidth = 300;
 const slideMargin = 40;
@@ -61,21 +62,22 @@ function Carousel(props:any) {
 
     return (
         <div className="font-sans group">
-            <div className="h-[250px] overflow-hidden relative">
+            <div className="h-[160px] overflow-hidden relative">
                 <ul
                     ref={sliderRef}
                     onScroll={(ev) => {
                         setSliderPosition(ev.currentTarget.scrollLeft);
                     }}
-                    className="flex h-[340px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows"
+                    className="flex h-[200px] pb-10 overflow-x-auto sm:snap-x sm:snap-mandatory group/arrows"
                 >
                     {props.content.map((slide:any) => (
                         <li
                             className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 py-2 last:mr-5"
                             key={slide.id}
                         >
-                            <div className="slide-center relative flex flex-col w-[300px] shadow-lg">
-                                <div className="bg-black aspect-[4/3] rounded-2xl hover:scale-[102%] transition-all duration-500 overflow-hidden flex-col flex justify-end">
+                            <Link href="/NotFound">
+                            <div className="slide-center relative flex flex-col w-[300px]">
+                                <div className="bg-black/80 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-black transition-all duration-500 hover:cursor-pointer overflow-hidden flex-col flex justify-end">
                                     <div className=" absolute top-0">
                                         <p className=" font-semibold px-2 pt-2">
                                             {slide.attributes.title}
@@ -84,31 +86,32 @@ function Carousel(props:any) {
                                             {slide.attributes.summary}
                                         </p>
                                     </div>
-                                    <div className=" aspect-[5/3] object-cover realative flex-col justify-center bg-black border-[#101010] border-2">
+                                    {/* <div className=" aspect-[5/3] object-cover realative flex-col justify-center bg-black border-[#101010] border-2">
                                         <p className="font-semibold w-full text-center absolute top-[50%] translate-y-[50%] text-[#101020]">{slide.attributes.title}</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
+                            </Link>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-125px] pl-8 sm:block hidden">
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute translate-y-[-80px] pl-8 sm:block hidden">
                 <button
                     disabled={sliderPosition === 0}
                     onClick={() => goToPreviousSlide()}
-                    className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 transform transition-all duration-500"}
+                    className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 hover:cursor-pointer transform transition-all duration-500"}
                 >
                     <Chevron className="w-3 h-3 text-white" />
                     <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>
                     <span className="sr-only">Next slide</span>
                 </button>
             </div>
-            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-125px] pr-8 sm:block hidden">
+            <div className="opacity-0 group-hover:opacity-100 duration-700 absolute right-0 translate-y-[-80px] pr-8 sm:block hidden">
                 <button
                     disabled={scrolledToEndOfSlider || currentSlide === props.content.length || !hasScrollableArea}
                     onClick={() => goToNextSlide()}
-                    className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 transform transition-all duration-500"}
+                    className={"disabled:opacity-0 scale-90 disabled: w-8 h-8 flex items-center justify-center translate-y-[-50%] hover:scale-110 hover:cursor-pointer transform transition-all duration-500"}
                 >
                     <Chevron className="rotate-180 w-3 h-3 text-white" />
                     <div className="w-8 h-8 absolute -z-10 bg-white rounded-full opacity-20"></div>

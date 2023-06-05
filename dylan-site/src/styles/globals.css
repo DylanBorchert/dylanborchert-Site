@@ -35,7 +35,11 @@
   .slide-center {
     transform: translateX(calc(max(var(--container-size), 100vw) / 2 - calc(var(--container-size) / 2)))
   }
+  .small-caps {
+    font-variant-caps: small-caps;
+  }
 }
+
 
 body {
   scrollbar-width: thin;
