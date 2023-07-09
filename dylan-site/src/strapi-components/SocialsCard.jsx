@@ -47,7 +47,7 @@ export default function SocialsCard(props) {
           </a>
         </div>
         <div className="group text-white px-2" >
-          <a href="https://www.instagram.com/_phantom_media_/" target="_blank" className='hover:text-[#F58529] hover:ease-in transition duration-150 ease-out'>
+          <a href="https://www.threads.net/@dylan_borchert" target="_blank" className='hover:text-[#F58529] hover:ease-in transition duration-150 ease-out'>
             <svg 
                 className="w-6 h-6  fill-current hover:animate-[spin_0.3s_1]"
                 role="img" viewBox="0 0 192 192" 
