@@ -17,7 +17,6 @@ export default function Home({commit_msg, home_page}: any) {
         <div>
           <About content={home_page[0]["data"]["attributes"] as any} />
         </div>
-        <div></div>
       </div>
     </div>
   )

@@ -76,7 +76,7 @@ function NavigationMenu(props) {
                 <span className="hidden py-2 sm:block">
                     Last updated on {props.commit_msg[1]} [
                     <a
-                        href={`https://github.com/dborc610/dylanborchert-Site/commit/${props.commit_msg[0]}`}
+                        href={`https://github.com/DylanBorchert/dylanborchert-Site/commit/${props.commit_msg[0]}`}
                         target="_blank"
                         rel="noreferrer"
                         title={props.commit_msg[2]}

@@ -14,7 +14,9 @@ function ContentProcessor(props:any) {
 
 
   return (
-    <div className='my-5'>
+    <div className='pb-8'>
+      <div className='w-full h-[50%] absolute -z-10'>
+      </div>
       {props.content.map((item:any, index:number) => {
         switch (item["__component"]) {
           case 'general.highlight-projects':
@@ -32,15 +34,6 @@ function ContentProcessor(props:any) {
               <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto px-5 my-5" remarkPlugins={[remarkGfm]}>
                 {item["text"]} 
               </ReactMarkdown>
-            )
-          case 'general.socials':
-            return (
-              <div key={index}>
-                <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
-                  {item["title"]}
-                </h1>
-                <SocialsCard key={index} content={item}/>
-              </div>
             )
           default:
             console.warn("Unknown component type: " + item["__component"])
