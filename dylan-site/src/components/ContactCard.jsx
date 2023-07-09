@@ -62,7 +62,7 @@ function ContactCard() {
 					className="flex"
 				>
 					<div className="flex justify-between">
-						<p className="text-sm pr-5 text-white text-md font-semibold my-auto group-hover:text-primary-1">
+						<p className="text-sm px-5 text-white text-md font-semibold my-auto group-hover:text-primary-1">
 							dborc610@mtroyal.ca
 						</p>
 					</div>
