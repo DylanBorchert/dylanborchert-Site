@@ -22,11 +22,11 @@ function NavigationMenu(props) {
                         <Link href="/NotFound">
                             <SlideTextLarge
                                 text1={
-                                <div className="text-white">
+                                <div className="text-white small-caps">
                                     About
                                 </div>} 
                                 text2={
-                                <div className="text-transparent font-outline-white">
+                                <div className="text-transparent font-outline-white small-caps">
                                     About
                                 </div>
                                 }
@@ -35,11 +35,11 @@ function NavigationMenu(props) {
                         <Link href="/NotFound">
                             <SlideTextLarge
                                 text1={
-                                <div className=" text-white">
+                                <div className=" text-white small-caps">
                                     Projects
                                 </div>} 
                                 text2={
-                                <div className="text-transparent font-outline-white">
+                                <div className="text-transparent font-outline-white small-caps">
                                     Projects
                                 </div>
                                 }
@@ -48,11 +48,11 @@ function NavigationMenu(props) {
                         <Link href="/NotFound">
                             <SlideTextLarge
                                 text1={
-                                <div className="text-white">
+                                <div className="text-white small-caps">
                                     Blog
                                 </div>} 
                                 text2={
-                                <div className="text-transparent font-outline-white">
+                                <div className="text-transparent font-outline-white small-caps">
                                     Blog
                                 </div>
                                 }
@@ -76,7 +76,7 @@ function NavigationMenu(props) {
                 <span className="hidden py-2 sm:block">
                     Last updated on {props.commit_msg[1]} [
                     <a
-                        href={`https://github.com/dborc610/dylanborchert-Site/commit/${props.commit_msg[0]}`}
+                        href={`https://github.com/DylanBorchert/dylanborchert-Site/commit/${props.commit_msg[0]}`}
                         target="_blank"
                         rel="noreferrer"
                         title={props.commit_msg[2]}

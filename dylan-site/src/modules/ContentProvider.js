@@ -1,4 +1,5 @@
 import axios from "axios";
+import { cache } from 'react';
 
 export const getHomePage = async function () {
 	axios.defaults.headers.common[
@@ -6,7 +7,7 @@ export const getHomePage = async function () {
 	] = `bearer ${process.env.STRAPI_KEY}`;
 
 	const response = await axios.get(
-		`https://strapi.phantommedia.online/api/home-page`,
+		`${process.env.STRAPI_HOST}/api/home-page`,
 		{
 			params: {
 				"populate[content][populate][projects][populate]": "cover",

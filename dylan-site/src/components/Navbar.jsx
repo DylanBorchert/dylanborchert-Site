@@ -4,6 +4,7 @@ import { Rotate as Hamburger } from 'hamburger-react'
 import SlideText from "../animated-components/SlideText.jsx";
 import NavigationMenu from "../components/NavigationMenu.jsx";
 import classNames from "classnames";
+import Link from 'next/link';
 
 const Navbar = (props) => {
 
@@ -31,11 +32,11 @@ const Navbar = (props) => {
      }, [isOpen]);
 
     return (
-        <div className="z-40">
+        <div className="z-40 bg-black">
         {isOpen ? <NavigationMenu commit_msg={props.commit_msg} isOpen={isOpen}/> : null}
-            <div className="pt-8 px-5 flex align-middle justify-between  z-20">
+            <div className="flex align-middle justify-between  z-20 max-w-[800px] mx-auto px-5 ">
                 
-                <div className="h-[2rem] z-20 my-auto">
+                <div className="h-[2rem] leading-[48px] z-20 my-auto pt-1 ml-2">
                     <SlideText 
                         text1={
                         <div className="text-white text-[1rem] tracking-tighter">
@@ -49,11 +50,30 @@ const Navbar = (props) => {
                         }
                     />
                 </div>
-                <div className={classNames(
-                    "z-20 transition-all duration-100",
-                    isOpen ? `mr-[${scrollWidth}px]`: "mr-0",
-                )}>
-                    <Hamburger color={"#f1f1f1"} size={25} rounded toggled={isOpen} toggle={setOpen}/>
+                <div className="sm:flex flex-row justify-around z-20 hidden">
+                    <Link href="/NotFound">
+                        <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
+                            About
+                        </span>
+                    </Link>
+                    <Link href="/NotFound">
+                        <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
+                            Projects
+                        </span>
+                    </Link>
+                    <Link href="/NotFound">
+                        <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
+                            Blog
+                        </span>
+                    </Link>
+                    <Link href="/NotFound">
+                        <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
+                            Contact
+                        </span>
+                    </Link>
+                </div>
+                <div className="h-[48px] leading-[48px] z-20 sm:hidden">
+                    <Hamburger color={"#f1f1f1"} size={20} rounded toggled={isOpen} toggle={setOpen}/>
                 </div>
             </div>
         </div>

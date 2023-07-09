@@ -14,12 +14,13 @@ function ContentProcessor(props:any) {
 
 
   return (
-    <>
+    <div className='pb-8'>
+      <div className='w-full h-[50%] absolute -z-10'>
+      </div>
       {props.content.map((item:any, index:number) => {
         switch (item["__component"]) {
           case 'general.highlight-projects':
           case 'general.highlight-blogs':
-            break; // disable till finished
             return (
               <div key={index}>
                 <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
@@ -38,22 +39,8 @@ function ContentProcessor(props:any) {
             console.warn("Unknown component type: " + item["__component"])
         }
       })
-
-
       }
-
-      {/* <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto ">
-        My Projects
-      </h1>
-      <Carousel />
-      <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto">
-        Blog Posts
-      </h1>
-      <Carousel />
-      <ReactMarkdown className="markdown max-w-[800px] mx-auto" remarkPlugins={[remarkGfm]}>
-        {props.content[2]["Text"]}
-      </ReactMarkdown> */}
-    </>
+    </div>
   )
 }
 

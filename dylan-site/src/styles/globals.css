@@ -35,9 +35,19 @@
   .slide-center {
     transform: translateX(calc(max(var(--container-size), 100vw) / 2 - calc(var(--container-size) / 2)))
   }
+  .small-caps {
+    font-variant-caps: small-caps;
+  }
 }
+
 
 body {
   scrollbar-width: thin;
 }
 
+.about-gradient {
+  background-color: rgba(0,0,0,0);
+  background-image:         linear-gradient(top, rgba(0,0,0,0) 0%, #050510 50dvh); /* W3C */
+  background-image:    -moz-linear-gradient(top, rgba(0,0,0,0) 0%, #050510 50dvh); /* FF3.6+ */
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #050510 50dvh); /* Chrome10+,Safari5.1+ */
+}

@@ -21,13 +21,12 @@ module.exports = {
 			},
 			keyframes: {
 				"fade-down-nav": {
-					'0%': {opacity: "0",top: "-100px",},
-					'50%': {opacity: "1"},
+					'0%': {opacity: "0.5",top: "-20px",},
 					'100%': {opacity: "1",top: "0",},
 				},
 			},
       animation: {
-        "fade-down-nav": "fade-down-nav 0.3s ease-in forwards",
+        "fade-down-nav": "fade-down-nav 0.2s ease-in forwards",
       },
 		},
 	},
