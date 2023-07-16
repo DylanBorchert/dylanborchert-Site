@@ -51,17 +51,17 @@ const Navbar = (props) => {
                     />
                 </div>
                 <div className="sm:flex flex-row justify-around z-20 hidden">
-                    <Link href="/NotFound">
+                    <Link href="/">
                         <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
                             About
                         </span>
                     </Link>
-                    <Link href="/NotFound">
+                    <Link href="/Projects">
                         <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
                             Projects
                         </span>
                     </Link>
-                    <Link href="/NotFound">
+                    <Link href="/Blogs">
                         <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
                             Blog
                         </span>

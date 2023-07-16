@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Socials from '../components/Socials.jsx'
+import Socials from './Socials.jsx'
 
 export default function SocialsCard(props) {
 

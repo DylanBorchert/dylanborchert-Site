@@ -25,7 +25,7 @@ const DotParticals = (props) => {
             options={{
                 background: {
                     color: {
-                        value: "#050510",
+                        value: "#101020",
                     },
                 },
                 fpsLimit: 120,

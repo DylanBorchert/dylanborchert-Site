@@ -1,10 +1,24 @@
 import Navbar from "./Navbar.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Typewriter from 'typewriter-effect';
 import ContentProcessor from "./ComponentsProcessor";
-import SocialsCard from "@/strapi-components/SocialsCard.jsx";
+import SocialsCard from "./SocialsCard";
 
 function Home(props:any ) {
+
+  const getTags = () => {
+    //shuffle tags
+    let contentTags = props.content.tags
+    if (props.content.shuffle_tags) {
+      let currentIndex = contentTags.length,  randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [contentTags[currentIndex], contentTags[randomIndex]] = [contentTags[randomIndex], contentTags[currentIndex]];
+      }
+    }
+    return contentTags
+  }
 
   return (
     <div className="about-gradient min-h-[100dvh]">
@@ -17,7 +31,7 @@ function Home(props:any ) {
           <div className="text-md">
             <Typewriter
               options={{
-                strings: props.content.tags,
+                strings: getTags(),
                 autoStart: true,
                 loop: true,
                 deleteSpeed: 30,

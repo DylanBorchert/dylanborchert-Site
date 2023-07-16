@@ -55,14 +55,13 @@ function Carousel(props:any) {
         } else {
             setHasScrollableArea(sliderRef.current.scrollWidth > sliderRef.current.clientWidth)
         }
-        console.log(props.content)
     }, [sliderPosition]);
 
 
 
     return (
         <div className="font-sans group">
-            <div className="h-[160px] overflow-hidden relative">
+            <div className="h-[165px] overflow-hidden relative">
                 <ul
                     ref={sliderRef}
                     onScroll={(ev) => {
@@ -72,25 +71,22 @@ function Carousel(props:any) {
                 >
                     {props.content.map((slide:any) => (
                         <li
-                            className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 py-2 last:mr-5"
+                            className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 py-2"
                             key={slide.id}
                         >
-                            <Link href="/NotFound">
-                            <div className="slide-center relative flex flex-col w-[300px]">
-                                <div className="bg-black/80 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-black transition-all duration-500 hover:cursor-pointer overflow-hidden flex-col flex justify-end">
-                                    <div className=" absolute top-0">
-                                        <p className=" font-semibold px-2 pt-2">
-                                            {slide.attributes.title}
-                                        </p>
-                                        <p className=" text-xs px-2">
-                                            {slide.attributes.summary}
-                                        </p>
+                            <Link href="/NotFound"> 
+                                <div className="slide-center relative flex flex-col w-[300px]">
+                                    <div className="bg-black/90 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-black transition-all duration-500 hover:cursor-pointer overflow-hidden flex-col flex justify-end">
+                                        <div className=" absolute top-0">
+                                            <p className=" font-semibold px-2 pt-2">
+                                                {slide.attributes.title}
+                                            </p>
+                                            <p className=" text-xs px-2">
+                                                {slide.attributes.summary}
+                                            </p>
+                                        </div>
                                     </div>
-                                    {/* <div className=" aspect-[5/3] object-cover realative flex-col justify-center bg-black border-[#101010] border-2">
-                                        <p className="font-semibold w-full text-center absolute top-[50%] translate-y-[50%] text-[#101020]">{slide.attributes.title}</p>
-                                    </div> */}
                                 </div>
-                            </div>
                             </Link>
                         </li>
                     ))}
