@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import DynamicText from '../strapi-components/DynamicText.jsx'
 import Carousel from '../strapi-components/Carousel'
+import Showcase from '../strapi-components/Showcase'
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import SocialsCard from '../strapi-components/SocialsCard.jsx'
+
 
 
 function ContentProcessor(props:any) {
@@ -14,7 +14,7 @@ function ContentProcessor(props:any) {
 
 
   return (
-    <div className='pb-8'>
+    <div className='py-8'>
       <div className='w-full h-[50%] absolute -z-10'>
       </div>
       {props.content.map((item:any, index:number) => {
@@ -31,10 +31,19 @@ function ContentProcessor(props:any) {
             )
           case 'general.markdown':
             return (
-              <ReactMarkdown key={index} className="markdown max-w-[800px] mx-auto px-5 my-5" remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown linkTarget="_blank" key={index} className="markdown max-w-[800px] mx-auto px-5" remarkPlugins={[remarkGfm]}>
                 {item["text"]} 
               </ReactMarkdown>
             )
+          // case 'general.showcase-project':
+          //   return (
+          //     <div key={index}>
+          //       <h1 className="font-bold text-xl my-1 max-w-[800px] mx-auto pl-5">
+          //         {item["title"]}
+          //       </h1>
+          //       <Showcase/>
+          //     </div>
+          //   )
           default:
             console.warn("Unknown component type: " + item["__component"])
         }
