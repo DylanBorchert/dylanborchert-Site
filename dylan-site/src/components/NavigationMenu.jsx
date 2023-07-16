@@ -19,7 +19,7 @@ function NavigationMenu(props) {
                 <div className="flex-grow"></div>
                 <div className="m-auto w-[500px] grid sm:grid-cols-2 grid-cols-1 mx-8">
                     <div className="mr-auto">
-                        <Link href="/NotFound">
+                        <Link href="/">
                             <SlideTextLarge
                                 text1={
                                 <div className="text-white small-caps">
@@ -32,7 +32,7 @@ function NavigationMenu(props) {
                                 }
                             />
                         </Link>
-                        <Link href="/NotFound">
+                        <Link href="/Projects">
                             <SlideTextLarge
                                 text1={
                                 <div className=" text-white small-caps">
@@ -45,7 +45,7 @@ function NavigationMenu(props) {
                                 }
                             />
                         </Link>
-                        <Link href="/NotFound">
+                        <Link href="/Blogs">
                             <SlideTextLarge
                                 text1={
                                 <div className="text-white small-caps">
