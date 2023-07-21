@@ -14,7 +14,7 @@ export default function Projects({commit_msg, project_page}: any) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     return {
       props: {

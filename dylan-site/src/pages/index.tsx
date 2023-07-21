@@ -22,7 +22,7 @@ export default function Home({commit_msg, home_page}: any) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   return {
     props: {
