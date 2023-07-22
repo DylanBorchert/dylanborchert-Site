@@ -62,7 +62,7 @@ const Navbar = (props) => {
     return (
         <>
             <div className={
-                    classNames("right-2 bottom-2 w-6 h-6 fixed z-20 transition duration-150 ease-in-out",
+                    classNames("right-5 bottom-5 w-6 h-6 fixed z-20 transition duration-150 ease-in-out",
                         {"opacity-0 ": getScrollState == "none"},
                         {"opacity-100 hover:cursor-pointer": getScrollState == "up"},
                         {"opacity-100 hover:cursor-pointer": getScrollState == "down"}
