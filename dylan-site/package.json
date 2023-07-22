@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.7",
     "react-particles": "^2.9.3",
+    "react-use-scroll-direction": "^0.1.0",
     "remark-gfm": "^3.0.1",
     "tailwindcss": "3.3.1",
     "three": "0.122.0",
