@@ -2,9 +2,7 @@ import React from 'react'
 
 function Loading() {
   return (
-    <div className='w-full h-[100dvh] bg-black/50 flex justify-center align-middle absolute backdrop-blur-sm z-50'>
-
-    
+    <div className='w-full h-[100dvh] bg-black/50 flex justify-center align-middle fixed backdrop-blur-sm z-50 top-0'>
       <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster top-[50%] translate-y-[-50%] scale-50">
         <div class="wheel"></div>
         <div class="hamster">
