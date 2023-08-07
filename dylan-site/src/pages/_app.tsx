@@ -28,11 +28,8 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      {loading ? (
-        <LoadingPage />
-      ) : (
-        <Component {...pageProps} />
-      )}
+      {loading ? <LoadingPage />: <> </>}
+      <Component {...pageProps} />
     </>
   );
 }
