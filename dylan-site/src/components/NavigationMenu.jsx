@@ -23,11 +23,11 @@ function NavigationMenu(props) {
                             <SlideTextLarge
                                 text1={
                                 <div className="text-white small-caps">
-                                    About
+                                    Home
                                 </div>} 
                                 text2={
                                 <div className="text-transparent font-outline-white small-caps">
-                                    About
+                                    Home
                                 </div>
                                 }
                             />
@@ -59,8 +59,8 @@ function NavigationMenu(props) {
                             /> 
                         </Link>
                     </div>
-                    <Socials />
-                    <ContactCard />
+                    {/* <Socials />
+                    <ContactCard /> */}
                 </div>
                 <div className="flex-grow"></div>
             </div>
@@ -73,6 +73,7 @@ function NavigationMenu(props) {
                         Contact
                     </span>
                 </div>
+                {/* REMOVED COMMIT MESSAGE 
                 <span className="hidden py-2 sm:block">
                     Last updated on {props.commit_msg[1]} [
                     <a
@@ -84,7 +85,7 @@ function NavigationMenu(props) {
                     commit {props.commit_msg[0].split(" ")[0].substring(0, 7)}
                     </a>
                     ]
-                </span>
+                </span> */}
             </div>
         </div>
     )
