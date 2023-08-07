@@ -27,7 +27,7 @@
 
 @layer base {
   :root {
-    --container-size: 800px;
+    --container-size: 1060px;
     --background-color: #101020;
   }
 

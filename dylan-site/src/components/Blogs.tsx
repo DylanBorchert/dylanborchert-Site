@@ -1,7 +1,7 @@
 import Navbar from "./Navbar.jsx";
 import { useEffect, useState } from "react";
 import Typewriter from 'typewriter-effect';
-import ContentProcessor from "./ComponentsProcessor";
+import ContentProcessor from "./ContentProcessor.jsx";
 
 function Blogs(props:any ) {
 

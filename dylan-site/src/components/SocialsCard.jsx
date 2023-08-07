@@ -4,7 +4,7 @@ import Socials from './Socials.jsx'
 export default function SocialsCard(props) {
 
   return (
-    <div className='max-w-[800px]'>
+    <div className='max-w-[1060px]'>
       <div className='py-3 flex'>
         <div className="group text-white pr-2" >
           <a href="https://github.com/DylanBorchert" target="_blank" className='hover:text-[#F05032] hover:ease-in transition duration-150 ease-out'>

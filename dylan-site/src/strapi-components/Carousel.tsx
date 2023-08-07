@@ -74,7 +74,7 @@ function Carousel(props:any) {
                             className="snap-start snap-always shrink-0 text-white scroll-mx-5 ml-5 py-2"
                             key={slide.id}
                         >
-                            <Link href="/NotFound"> 
+                            <Link href={`${props.type}/${slide.attributes.UID}`}> 
                                 <div className="slide-center relative flex flex-col w-[300px]">
                                     <div className="bg-black/90 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-black transition-all duration-500 hover:cursor-pointer overflow-hidden flex-col flex justify-end">
                                         <div className=" absolute top-0">
