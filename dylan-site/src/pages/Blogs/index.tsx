@@ -9,7 +9,7 @@ export default function Projects({commit_msg, blog_page}: any) {
     return (
         <div className="">
             <Navbar commit_msg={commit_msg}/>   
-            <Project content={blog_page[0]["data"]["attributes"] as any} />
+            <Project content={blog_page[0].data.attributes as any} />
         </div>
     )
 }
