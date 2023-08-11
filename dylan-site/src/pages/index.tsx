@@ -21,7 +21,7 @@ export default function Home({home_page}: any) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   return {
     props: {
