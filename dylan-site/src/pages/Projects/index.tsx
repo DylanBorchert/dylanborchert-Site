@@ -14,7 +14,7 @@ export default function Projects({project_page}: any) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     return {
       props: {
