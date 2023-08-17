@@ -32,7 +32,6 @@ function ContentProcessor(props) {
               <ReactMarkdown 
                 linkTarget="_blank" 
                 key={index} 
-                children={item["text"]}
                 className="markdown max-w-[1060px] mx-auto px-5 text-none" 
                 remarkPlugins={[remarkToc, remarkGfm]}
                 rehypePlugins={[rehypeSlug]}
@@ -55,7 +54,9 @@ function ContentProcessor(props) {
                     );
                   }
                 }}
-                />
+                >
+                  {item["text"]}
+              </ReactMarkdown>
             )
           case 'general.showcase-project':
             return (
