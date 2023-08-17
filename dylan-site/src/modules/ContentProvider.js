@@ -23,8 +23,13 @@ export const getHomePage = async function () {
 		return [response.data];
 	} else {
 		console.log("error loading home page");
-		const data = fs.readFileSync('/home-page.json', 'utf8');
-		return [JSON.parse(data)];
+		// check if file exits first
+		if(fs.existsSync('/home-page.json')) { 
+			const data = fs.readFileSync('/home-page.json', 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
@@ -49,8 +54,12 @@ export const getAboutPage = async function () {
 		return [response.data];
 	} else {
 		console.log("error loading about page");
-		const data = fs.readFileSync('/about-page.json', 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync('/about-page.json')) {
+			const data = fs.readFileSync('/about-page.json', 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
@@ -76,8 +85,12 @@ export const getProjectPage = async function () {
 		return [response.data];
 	} else {
 		console.log("error loading project page");
-		const data = fs.readFileSync('/project-page.json', 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync('/project-page.json')) {
+			const data = fs.readFileSync('/project-page.json', 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
@@ -103,8 +116,12 @@ export const getBlogPage = async function () {
 		return [response.data];
 	} else {
 		console.log("error loading blog page");
-		const data = fs.readFileSync('/blog-page.json', 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync('/blog-page.json')) {
+			const data = fs.readFileSync('/blog-page.json', 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
@@ -155,8 +172,12 @@ export const getAllBlogs = async function () {
 		return [response.data];
 	} else {
 		console.log("error loading blogs");
-		const data = fs.readFileSync('/blogs.json', 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync('/blogs.json')) {
+			const data = fs.readFileSync('/blogs.json', 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
@@ -184,8 +205,12 @@ export const getProject = async function (UID) {
 		return [response.data];
 	} else {
 		console.log("error loading project");
-		const data = fs.readFileSync(`/projects-${UID}.json`, 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync(`/projects-${UID}.json`)) {
+			const data = fs.readFileSync(`/projects-${UID}.json`, 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
@@ -210,8 +235,12 @@ export const getBlog = async function (UID) {
 		return [response.data];
 	} else {
 		console.log("error loading blog");
-		const data = fs.readFileSync(`/blogs-${UID}.json`, 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync(`/blogs-${UID}.json`)) {
+			const data = fs.readFileSync(`/blogs-${UID}.json`, 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return [];
+		}
 	}
 };
 
