@@ -41,12 +41,13 @@ function ContentProcessor(props) {
                     return !inline && match ? (
                       <SyntaxHighlighter
                         {...props}
-                        children={String(children).replace(/\n$/, "")}
                         style={vscDarkPlus}
                         data-start-line={1}
                         language={match[1]}
                         PreTag="div"
-                      />
+                      >
+                        {String(children).replace(/\n$/, "")}
+                      </SyntaxHighlighter>
                     ) : (
                       <code {...props} className={className}>
                         {children}
