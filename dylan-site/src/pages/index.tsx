@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Particals from '../animated-components/DotParticals'
 import contentProvider from '../modules/ContentProvider.js'
-import About from '../components/About'
+import Home from '../components/Home'
 
 
-export default function Home({home_page}: any) {
+export default function HomePage({home_page}: any) {
 
 
   return (
@@ -14,7 +14,7 @@ export default function Home({home_page}: any) {
       <div className="">
         <Navbar/>   
         <div>
-          <About content={home_page[0]["data"]["attributes"] as any} />
+          <Home content={home_page[0]["data"]["attributes"] as any} />
         </div>
       </div>
     </div>

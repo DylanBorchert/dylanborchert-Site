@@ -1,3 +1,6 @@
+:root {
+    --color-code-bg: rgb(30, 30, 30);
+  }
 /* 
 ==========================================================================
     Flip Box Styles
@@ -140,6 +143,10 @@
 ==========================================================================
 */
 
+.markdown {
+    white-space: 'pre-wrap';
+}
+
 .markdown h1 {
     display: block;
     font-size: 2em;
@@ -252,7 +259,17 @@
 .markdown p {
     margin: 0;
     font-size: 1em;
+    margin-bottom: 1em;
 }
+
+code {
+    background-color: var(--color-code-bg);
+    padding: 0 2px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: monospace !important;
+}
+
 
 /* 
 ==========================================================================
