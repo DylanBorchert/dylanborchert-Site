@@ -144,12 +144,12 @@
 }
 
 .markdown code.inline {
-    background-color: black;
+    background-color: rgb(30, 30, 30);
     padding: 1px 4px;
     border-radius: 4px;
     font-size: 16px;
     font-family: monospace !important;
-    outline: rgb(30, 30, 30) solid 1px;
+    outline: black solid 1px;
 }
 
 /* 
