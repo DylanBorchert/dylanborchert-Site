@@ -49,7 +49,7 @@ function ContentProcessor(props) {
                         {String(children).replace(/\n$/, "")}
                       </SyntaxHighlighter>
                     ) : (
-                      <code {...props} className={className}>
+                      <code {...props} className={"inline " + className}>
                         {children}
                       </code>
                     );
