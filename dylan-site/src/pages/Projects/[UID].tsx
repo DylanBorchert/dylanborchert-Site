@@ -4,19 +4,50 @@ import ContentProcessor from "../../components/ContentProcessor.jsx";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar.jsx";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Page({ project }: any) {
+
+	function CMS_Handler() {
+		if (project == null) {
+			toast.error('Error Loading Content', {
+				toastId: "error-loading-content",
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "dark",
+			});
+			return null
+		} else {
+			return <ContentProcessor content={project[0].data[0].attributes.content} />
+		}
+	}
 
 	return (
 		<>
 			<Navbar />
 			<div className="min-h-[calc(100dvh-48px)] bg-background-black">
 				<div className="text-white w-full">
-
-
-					<ContentProcessor content={project[0].data[0].attributes.content} />
-
+					{CMS_Handler()}
 				</div>
 			</div>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="dark"
+			/>
 		</>
 	);
 }

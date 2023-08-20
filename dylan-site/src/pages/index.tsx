@@ -4,20 +4,60 @@ import Particals from '../animated-components/DotParticals'
 import contentProvider from '../modules/ContentProvider.js'
 import Home from '../components/Home'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function HomePage({home_page}: any) {
+
+export default function HomePage({ home_page }: any) {
+
+
+  function CMS_Handler() {
+    if (home_page == null) {
+      toast.error('Error Loading Content', {
+        toastId: "error-loading-content",
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      return null
+    } else {
+      return <Home content={home_page[0]["data"]["attributes"] as any} />
+    }
+  }
 
 
   return (
-    <div className="font-sans">
-        <Particals/>
-      <div className="">
-        <Navbar/>   
-        <div>
-          <Home content={home_page[0]["data"]["attributes"] as any} />
+    <>
+      <div className="font-sans">
+        <Particals />
+        <div className="">
+          <Navbar />
+          <div>
+            {CMS_Handler()}
+          </div>
         </div>
       </div>
-    </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+
+
+    </>
+
   )
 }
 
