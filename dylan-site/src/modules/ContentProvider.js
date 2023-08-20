@@ -28,7 +28,7 @@ export const getHomePage = async function () {
 			const data = fs.readFileSync('/home-page.json', 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
@@ -58,7 +58,7 @@ export const getAboutPage = async function () {
 			const data = fs.readFileSync('/about-page.json', 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
@@ -89,7 +89,7 @@ export const getProjectPage = async function () {
 			const data = fs.readFileSync('/project-page.json', 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
@@ -120,7 +120,7 @@ export const getBlogPage = async function () {
 			const data = fs.readFileSync('/blog-page.json', 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
@@ -146,8 +146,12 @@ export const getAllProjects = async function () {
 		return [response.data];
 	} else {
 		console.log("error loading projects");
-		const data = fs.readFileSync('/projects.json', 'utf8');
-		return [JSON.parse(data)];
+		if(fs.existsSync('/projects.json')) {
+			const data = fs.readFileSync('/projects.json', 'utf8');
+			return [JSON.parse(data)];
+		} else {
+			return null;
+		}
 	}
 };
 
@@ -176,7 +180,7 @@ export const getAllBlogs = async function () {
 			const data = fs.readFileSync('/blogs.json', 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
@@ -209,7 +213,7 @@ export const getProject = async function (UID) {
 			const data = fs.readFileSync(`/projects-${UID}.json`, 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
@@ -239,7 +243,7 @@ export const getBlog = async function (UID) {
 			const data = fs.readFileSync(`/blogs-${UID}.json`, 'utf8');
 			return [JSON.parse(data)];
 		} else {
-			return [];
+			return null;
 		}
 	}
 };
