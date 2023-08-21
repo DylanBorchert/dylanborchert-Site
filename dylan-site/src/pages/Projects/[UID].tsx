@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Page({ project }: any) {
 
 	function CMS_Handler() {
-		if (project == null) {
+		if (project == null || project[0].data[0] === undefined) {
 			toast.error('Error Loading Content', {
 				toastId: "error-loading-content",
 				position: "top-right",
