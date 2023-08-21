@@ -9,7 +9,7 @@ html {
 ==========================================================================
 */
 .Toastify__toast-container {
-    margin-top: 48px;
+    margin-top: 48px !important;
 }
 
 
