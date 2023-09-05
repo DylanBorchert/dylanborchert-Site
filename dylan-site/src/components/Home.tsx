@@ -23,11 +23,13 @@ function Home(props:any ) {
   return (
     <div className="about-gradient min-h-[100dvh]">
       <div className="text-white w-full">
-        <div className="max-w-[1060px] mx-auto my-20 pl-5">
-          <h1 className=" font-bold text-5xl my-2 ">
+        <div className="max-w-[1060px] mx-auto mt-20 mb-12 pl-5">
+          <p className="text-lg">
+            {props.content.subTitle}
+          </p>
+          <h1 className=" font-bold text-4xl my-5 ">
             {props.content.title}
           </h1>
-          <SocialsCard />
           <div className="text-md">
             <Typewriter
               options={{
