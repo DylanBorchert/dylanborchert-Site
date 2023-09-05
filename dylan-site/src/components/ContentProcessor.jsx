@@ -11,6 +11,41 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 function ContentProcessor(props) {
 
+
+  const MarkdownHelper = (item, index) => {
+    return (
+      <ReactMarkdown
+        linkTarget="_blank"
+        key={index}
+        className="markdown max-w-[1060px] mx-auto px-5 text-none"
+        remarkPlugins={[remarkToc, remarkGfm]}
+        rehypePlugins={[rehypeSlug]}
+        components={{
+          code: ({ node, inline, className, children, ...props }) => {
+            const match = /language-(\w+)/.exec(className || "");
+            return !inline && match ? (
+              <SyntaxHighlighter
+                {...props}
+                style={vscDarkPlus}
+                data-start-line={1}
+                language={match[1]}
+                PreTag="div"
+              >
+                {String(children).replace(/\n$/, "")}
+              </SyntaxHighlighter>
+            ) : (
+              <code {...props} className={"inline " + className}>
+                {children}
+              </code>
+            );
+          }
+        }}
+      >
+        {item["text"]}
+      </ReactMarkdown>
+    )
+  }
+
   return (
     <div className='py-8'>
       <div className='w-full h-[50%] absolute -z-10'>
@@ -27,38 +62,12 @@ function ContentProcessor(props) {
                 <Carousel content={item.blogs ? item.blogs.data : item.projects.data} type={item.blogs ? 'Blogs' : 'Projects'} />
               </div>
             )
+          case 'general.all-projects':
+          case 'general.all-blogs':
+            { console.log(item.style) }
+            break;
           case 'general.markdown':
-            return (
-              <ReactMarkdown 
-                linkTarget="_blank" 
-                key={index} 
-                className="markdown max-w-[1060px] mx-auto px-5 text-none" 
-                remarkPlugins={[remarkToc, remarkGfm]}
-                rehypePlugins={[rehypeSlug]}
-                components={{
-                  code: ({ node, inline, className, children, ...props }) => {
-                    const match = /language-(\w+)/.exec(className || "");
-                    return !inline && match ? (
-                      <SyntaxHighlighter
-                        {...props}
-                        style={vscDarkPlus}
-                        data-start-line={1}
-                        language={match[1]}
-                        PreTag="div"
-                      >
-                        {String(children).replace(/\n$/, "")}
-                      </SyntaxHighlighter>
-                    ) : (
-                      <code {...props} className={"inline " + className}>
-                        {children}
-                      </code>
-                    );
-                  }
-                }}
-                >
-                  {item["text"]}
-              </ReactMarkdown>
-            )
+            return (MarkdownHelper(item, index))
           case 'general.showcase-project':
             return (
               <div key={index}>
