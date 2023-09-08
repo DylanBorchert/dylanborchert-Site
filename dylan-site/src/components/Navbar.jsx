@@ -100,6 +100,11 @@ const Navbar = (props) => {
                                 Home
                             </span>
                         </Link>
+                        <Link href="/About">
+                            <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
+                                About
+                            </span>
+                        </Link>
                         <Link href="/Projects">
                             <span className="text-white h-[48px] leading-[48px] text-sm hover:text-primary-1 px-3">
                                 Projects

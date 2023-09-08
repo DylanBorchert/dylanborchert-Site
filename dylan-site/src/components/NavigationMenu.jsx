@@ -32,6 +32,19 @@ function NavigationMenu(props) {
                                 }
                             />
                         </Link>
+                        <Link href="/About">
+                            <SlideTextLarge
+                                text1={
+                                <div className=" text-white small-caps">
+                                    About
+                                </div>} 
+                                text2={
+                                <div className="text-transparent font-outline-white small-caps">
+                                    About
+                                </div>
+                                }
+                            />
+                        </Link>
                         <Link href="/Projects">
                             <SlideTextLarge
                                 text1={
