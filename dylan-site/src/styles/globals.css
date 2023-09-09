@@ -11,6 +11,15 @@
   box-shadow: inset 0px 0px 1px 1px red;
 }
 
+.debug{
+  box-shadow: inset 0px 0px 1px 1px lime;
+}
+
+.debug *{
+  box-shadow: inset 0px 0px 1px 1px magenta;
+}
+
+
 @layer base {
   .font-outline-white {
     -webkit-text-stroke: 1px white;

@@ -21,9 +21,9 @@ function Home(props:any ) {
   }
 
   return (
-    <div className="about-gradient min-h-[100dvh]">
+    <div className="about-gradient min-h-[calc(100dvh-3rem)]">
       <div className="text-white w-full">
-        <div className="max-w-[1060px] mx-auto mt-20 mb-12 pl-5">
+        <div className="max-w-[1060px] mx-auto pt-20 mb-12 pl-5">
           <p className="text-lg">
             {props.content.subTitle}
           </p>

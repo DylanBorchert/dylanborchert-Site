@@ -33,6 +33,8 @@ export const getAboutPage = async () => {
 	const url = `${process.env.STRAPI_HOST}/api/about-page`;
 	const params = {
 		params: {
+			"populate[resume]": "*",
+			"populate[portrait]": "*",
 			"populate[content][populate][projects][populate]": "cover, tags",
 			"populate[content][populate][blogs][populate]": "cover, tags",
 		},
@@ -115,6 +117,7 @@ export const getBlog = async (UID) => {
 
 export default {
 	getHomePage,
+	getAboutPage,
 	getProjectPage,
 	getBlogPage,
 	getProject,
