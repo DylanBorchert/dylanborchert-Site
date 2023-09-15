@@ -27,7 +27,7 @@ function Home(props:any ) {
           <p className="text-lg">
             {props.content.subTitle}
           </p>
-          <h1 className=" font-bold text-4xl my-5 ">
+          <h1 className=" font-bold text-4xl my-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-1 to-white">
             {props.content.title}
           </h1>
           <div className="text-md">
