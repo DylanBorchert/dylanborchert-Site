@@ -19,6 +19,10 @@
   box-shadow: inset 0px 0px 1px 1px magenta;
 }
 
+.bottom-shadow-nav {
+  box-shadow: inset 0px -2px 1px -1px rgba(100,100,100,1);
+}
+
 
 @layer base {
   .font-outline-white {
@@ -37,7 +41,7 @@
 @layer base {
   :root {
     --container-size: 1060px;
-    --background-color: #101020;
+    --background-color: #09090b;
   }
 
 }

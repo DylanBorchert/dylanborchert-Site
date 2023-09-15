@@ -76,7 +76,7 @@ function Carousel(props:any) {
                         >
                             <Link href={`${props.type}/${slide.attributes.UID}`}> 
                                 <div className="slide-center relative flex flex-col w-[300px]">
-                                    <div className="bg-black/90 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-black transition-all duration-500 hover:cursor-pointer overflow-hidden flex-col flex justify-end">
+                                    <div className="bg-white/5 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-white/10 transition-all duration-500 hover:cursor-pointer overflow-hidden flex-col flex justify-end">
                                         <div className=" absolute top-0">
                                             <p className=" font-semibold px-2 pt-2">
                                                 {slide.attributes.title}

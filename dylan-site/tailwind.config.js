@@ -10,7 +10,7 @@ module.exports = {
 			colors: {
 				/* CSS HEX */
 				"smoky-black": "#121212",
-				"background-black": "#101020",
+				"background-black": "#09090b",
 				"primary-1": "#0292F2",
 				"secondary-1": "#0261A1",
 				"primary-2": "#FFBE0B",

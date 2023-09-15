@@ -25,7 +25,7 @@ const DotParticals = (props) => {
             options={{
                 background: {
                     color: {
-                        value: "#101020",
+                        value: "#09090b",
                     },
                 },
                 fpsLimit: 120,
@@ -59,14 +59,14 @@ const DotParticals = (props) => {
                 },
                 particles: {
                     color: {
-                        value: "#0292F2",
+                        value: "#02A2FF",
                     },
                     links: {
-                        color: "#0292F2",
+                        color: "#02A2FF",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
-                        width: 1,
+                        width: 2,
                     },
                     collisions: {
                         enable: true,
