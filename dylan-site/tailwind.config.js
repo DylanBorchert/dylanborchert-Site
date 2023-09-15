@@ -18,7 +18,7 @@ module.exports = {
 				"primary-4": "#0F9D58",
 			},
 			fontFamily: {
-				sans: "SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif",
+				sans: "Helvetica,Arial,sans-serif",
 			},
 			keyframes: {
 				"fade-down-nav": {
