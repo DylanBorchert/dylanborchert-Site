@@ -10,7 +10,7 @@ module.exports = {
 			colors: {
 				/* CSS HEX */
 				"smoky-black": "#121212",
-				"background-black": "#101020",
+				"background-black": "#09090b",
 				"primary-1": "#0292F2",
 				"secondary-1": "#0261A1",
 				"primary-2": "#FFBE0B",
@@ -18,7 +18,7 @@ module.exports = {
 				"primary-4": "#0F9D58",
 			},
 			fontFamily: {
-				sans: "SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif",
+				sans: "Helvetica,Arial,sans-serif",
 			},
 			keyframes: {
 				"fade-down-nav": {

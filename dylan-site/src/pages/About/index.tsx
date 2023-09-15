@@ -23,12 +23,12 @@ function About({about_page}:any ) {
           <SocialsCard />
           <div className="flex sm:gap-5 sm:justify-start justify-between">
             <a href={`https://strapi.phantommedia.online${about_page[0].data.attributes.resume.data.attributes.url}`} target="_blank">
-              <div className="p-2 outline outline-1 outline-white w-28 text-center rounded-lg text-sm mx-auto sm:mx-0 mt-2 hover:outline-primary-1 hover:text-primary-1  hover:font-semibold transition duration-400 ease-in-out">
+              <div className="p-2 bg-white/10 px-5 py-2 hover:bg-primary-1 hover:text-black text-center rounded-full text-sm sm:mx-0 mt-2 mx-auto transition duration-400 ease-in-out">
                 <p>My Resume</p>
               </div>
             </a>
             <Link href="/contact">
-              <div className="p-2 outline outline-1 outline-white w-28 text-center rounded-lg text-sm mx-auto sm:mx-0 mt-2 hover:outline-primary-1 hover:text-primary-1  hover:font-semibold transition duration-400 ease-in-out">
+              <div className="p-2 bg-white/10 px-5 py-2 hover:bg-primary-1 hover:text-black text-center rounded-full text-sm sm:mx-0 mt-2 mx-auto transition duration-400 ease-in-out">
                 <p>Contact Me</p>
               </div>
             </Link>
