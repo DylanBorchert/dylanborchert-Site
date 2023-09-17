@@ -79,10 +79,10 @@ function Carousel(props: any) {
                             <div className="slide-center relative flex flex-col w-[300px] group/item">
                                 <div className="bg-white/5 aspect-[4/2] rounded-xl shadow-xl hover:scale-[102%] hover:bg-white/10 transition-all duration-500 overflow-hidden flex-col flex justify-end">
                                     <div className=" absolute top-0">
-                                        <p className=" font-semibold px-2 pt-2">
+                                        <p className=" font-semibold px-5 pt-3">
                                             {slide.attributes.title}
                                         </p>
-                                        <p className=" text-xs px-2">
+                                        <p className=" text-xs px-5">
                                             {slide.attributes.summary}
                                         </p>
                                     </div>

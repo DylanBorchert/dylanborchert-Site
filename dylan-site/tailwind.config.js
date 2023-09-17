@@ -4,9 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				"gradient-radial":
-					"radial-gradient(var(--gradient-color-stops))",
-			},
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+			  },
 			colors: {
 				/* CSS HEX */
 				"smoky-black": "#121212",
