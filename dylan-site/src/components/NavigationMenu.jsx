@@ -62,11 +62,11 @@ function NavigationMenu(props) {
                             <SlideTextLarge
                                 text1={
                                 <div className="text-white small-caps">
-                                    Blog
+                                    Blogs
                                 </div>} 
                                 text2={
                                 <div className="text-transparent font-outline-white small-caps">
-                                    Blog
+                                    Blogs
                                 </div>
                                 }
                             /> 

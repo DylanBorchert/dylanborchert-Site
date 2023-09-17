@@ -27,10 +27,10 @@ function Home(props:any ) {
           <p className="text-lg">
             {props.content.subTitle}
           </p>
-          <h1 className=" font-bold text-4xl my-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-1 to-white w-72">
+          <h1 className=" font-bold text-4xl my-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-1 to-secondary-1 w-72">
             {props.content.title}
           </h1>
-          <div className="absolute w-full h-full top-0 left-0 z-[-10] bg-gradient-radial from-primary-1/20 via-primary-1/5  to-primary-1/0">
+          <div className="absolute w-[calc(100%-2.5rem)] max-w-[1060px] z-[-10] glow-shadow-md">
 
           </div>
           <div className="text-md">

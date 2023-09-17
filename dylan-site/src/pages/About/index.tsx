@@ -13,7 +13,7 @@ function About({about_page}:any ) {
     <div>
       <Navbar />
       <div className="mx-auto max-w-[1060px] px-5 grid sm:grid-cols-[14rem_2fr] grid-cols-1 mt-8">
-        <div className="m-auto rounded-full bg-black">
+        <div className="m-auto rounded-full bg-black glow-shadow-sm z-[-10]">
           <img src={`https://strapi.phantommedia.online${about_page[0].data.attributes.portrait.data.attributes.url}`} alt="" className="w-52 h-52 rounded-full"/>
         </div>
         <div className="flex flex-col justify-center p-5 h-full text-white m-auto sm:m-0">
