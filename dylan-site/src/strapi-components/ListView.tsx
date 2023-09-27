@@ -4,10 +4,10 @@ import Link from "next/link";
 function ListView(props: any) {
     return (
         <div className="max-w-[1060px] mx-auto px-5">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5 ">
                 {props.content.map((slide: any) => (
                     <li
-                        className="w-[300px] h-full bg-white/5 rounded-xl aspect-[16/9] mx-auto hover:scale-[102%] hover:bg-white/10 transition-all duration-500 "
+                        className="w-full max-w-[500px] h-full bg-white/5 rounded-xl aspect-[5/2] mx-auto hover:scale-[102%] hover:bg-white/10 transition-all duration-500 "
                         key={slide.id}
                     >
                         <div className="h-full w-full flex flex-col p-5 justify-between group/item">

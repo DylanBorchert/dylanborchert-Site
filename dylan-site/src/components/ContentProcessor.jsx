@@ -78,7 +78,14 @@ function ContentProcessor(props) {
             )
           case 'general.all-projects':
           case 'general.all-blogs':
-            { console.log(item.style) }
+            // return (
+            //   <div key={index}>
+            //     <h1 className="font-bold text-xl my-3 max-w-[1060px] mx-auto pl-5">
+            //       {item["title"]}
+            //     </h1>
+            //     {handleListOrCarousel(item, index)}
+            //   </div>
+            // )
             break;
           case 'general.markdown':
             return (MarkdownHelper(item, index))
