@@ -7,9 +7,23 @@ import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import ListView from '@/strapi-components/ListView';
 
 
 function ContentProcessor(props) {
+
+
+  const handleListOrCarousel = (item, index) => {
+    if (item["style"] === 'carousel') {
+      return (
+        <Carousel content={item.blogs ? item.blogs.data : item.projects.data} type={item.blogs ? 'Blogs' : 'Projects'} />
+      )
+    } else if (item["style"] === 'list') {
+      return (
+        <ListView content={item.blogs ? item.blogs.data : item.projects.data} type={item.blogs ? 'Blogs' : 'Projects'} />
+      )
+    }
+  }
 
 
   const MarkdownHelper = (item, index) => {
@@ -59,12 +73,19 @@ function ContentProcessor(props) {
                 <h1 className="font-bold text-xl my-3 max-w-[1060px] mx-auto pl-5">
                   {item["title"]}
                 </h1>
-                <Carousel content={item.blogs ? item.blogs.data : item.projects.data} type={item.blogs ? 'Blogs' : 'Projects'} />
+                {handleListOrCarousel(item, index)}
               </div>
             )
           case 'general.all-projects':
           case 'general.all-blogs':
-            { console.log(item.style) }
+            // return (
+            //   <div key={index}>
+            //     <h1 className="font-bold text-xl my-3 max-w-[1060px] mx-auto pl-5">
+            //       {item["title"]}
+            //     </h1>
+            //     {handleListOrCarousel(item, index)}
+            //   </div>
+            // )
             break;
           case 'general.markdown':
             return (MarkdownHelper(item, index))
