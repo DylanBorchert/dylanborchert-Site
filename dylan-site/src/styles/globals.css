@@ -11,6 +11,14 @@
   box-shadow: inset 0px 0px 1px 1px red;
 }
 
+.debug-s-1 {
+  box-shadow: inset 0px 0px 1px 1px turquoise;
+}
+
+.debug-s-2 {
+  box-shadow: inset 0px 0px 1px 1px orange;
+}
+
 .debug{
   box-shadow: inset 0px 0px 1px 1px lime;
 }
