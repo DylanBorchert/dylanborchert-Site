@@ -96,7 +96,8 @@ export const getProject = async (UID) => {
 	const params = {
 		params: {
 			"filters[UID][$eq]": UID,
-			"populate[content][populate][projects][populate]": "cover, tags",
+			"populate[tags]": "*",
+			"populate[content][populate]": "*",
 		},
 	};
 
@@ -108,7 +109,8 @@ export const getBlog = async (UID) => {
 	const params = {
 		params: {
 			"filters[UID][$eq]": UID,
-			"populate[content][populate][blogs][populate]": "cover, tags",
+			"populate[tags]": "*",
+			"populate[content][populate]": "*",
 		},
 	};
 
