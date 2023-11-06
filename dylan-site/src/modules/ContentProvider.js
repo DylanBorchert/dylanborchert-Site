@@ -1,8 +1,10 @@
 "use server";
-import axios from "axios";
-import fs from "fs";
+import Axios from "axios";
+import { setupCache } from "axios-cache-interceptor";
 
-const axiosWithAuthorization = axios.create({
+const axios = Axios.defaults.cache ? Axios : setupCache(Axios);
+
+const axiosConfig = axios.create({
 	headers: {
 		Authorization: `bearer ${process.env.STRAPI_KEY}`,
 	},
@@ -10,7 +12,8 @@ const axiosWithAuthorization = axios.create({
 
 const fetchData = async (url, params) => {
 	try {
-		const response = await axiosWithAuthorization.get(url, params);
+		const response = await axiosConfig.get(url, params);
+
 		return response.data ? [response.data] : null;
 	} catch (error) {
 		console.log("error loading data:", error);
