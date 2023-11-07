@@ -4,8 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-			  },
+				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+			},
 			colors: {
 				/* CSS HEX */
 				"smoky-black": "#121212",
@@ -16,18 +16,15 @@ module.exports = {
 				"primary-3": "#DB4437",
 				"primary-4": "#0F9D58",
 			},
-			fontFamily: {
-				sans: "Helvetica,Arial,sans-serif",
-			},
 			keyframes: {
 				"fade-down-nav": {
-					'0%': {opacity: "0.5",top: "-20px",},
-					'100%': {opacity: "1",top: "0",},
+					"0%": { opacity: "0.5", top: "-20px" },
+					"100%": { opacity: "1", top: "0" },
 				},
 			},
-      animation: {
-        "fade-down-nav": "fade-down-nav 0.2s ease-in forwards",
-      },
+			animation: {
+				"fade-down-nav": "fade-down-nav 0.2s ease-in forwards",
+			},
 		},
 	},
 	plugins: [require("tailwindcss"), require("autoprefixer")],

@@ -33,7 +33,7 @@ export default function HomePage({ home_page }: any) {
 
   return (
     <>
-      <div className="font-sans">
+      <div className="">
         <Particals />
         <div className="">
           <Navbar />

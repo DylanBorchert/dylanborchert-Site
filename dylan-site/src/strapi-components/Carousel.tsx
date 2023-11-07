@@ -61,7 +61,7 @@ function Carousel(props: any) {
 
 
     return (
-        <div className="font-sans group">
+        <div className="group">
             <div className="h-[165px] overflow-hidden relative">
                 <ul
                     ref={sliderRef}

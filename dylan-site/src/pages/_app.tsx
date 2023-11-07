@@ -1,6 +1,8 @@
 import '@/styles/globals.css'
 import '../styles/component.css';
 import LoadingPage from "../components/Loading.jsx"
+import Head from 'next/head';
+
 
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react'
@@ -28,7 +30,13 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      {loading ? <LoadingPage />: <> </>}
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      {loading ? <LoadingPage /> : <> </>}
       <Component {...pageProps} />
     </>
   );
